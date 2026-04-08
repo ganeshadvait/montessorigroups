@@ -1,3 +1,4 @@
+//File :- components/boty/amenities-section.tsx
 "use client"
 
 import { useEffect, useRef, useState } from "react"
@@ -145,25 +146,59 @@ export function AmenitiesSection() {
           </p>
         </div>
 
-        {/* Amenities Grid */}
-        <div ref={gridRef} className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-          {amenities.map((amenity, index) => (
-            <div
-              key={amenity.title}
-              className={`group relative p-6 rounded-2xl bg-background boty-shadow boty-transition hover:scale-[1.02] transition-all duration-700 ease-out ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-              }`}
-              style={{ transitionDelay: `${index * 80}ms` }}
-            >
-              <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl ${amenity.color} mb-4 group-hover:scale-110 boty-transition`}>
-                <amenity.icon className="w-6 h-6" />
-              </div>
-              <h3 className="font-serif text-lg text-foreground mb-1.5">{amenity.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{amenity.description}</p>
+        {/* Amenities — Mobile: horizontal scroll, Desktop: grid */}
+        <div ref={gridRef}>
+          {/* Mobile horizontal scroll */}
+          <div className="sm:hidden -mx-6 px-6 overflow-x-auto scrollbar-hide">
+            <div className="flex gap-4 pb-4 w-max">
+              {amenities.map((amenity, index) => (
+                <div
+                  key={amenity.title}
+                  className={`group relative p-6 rounded-2xl bg-background boty-shadow boty-transition w-[260px] flex-shrink-0 transition-all duration-700 ease-out ${
+                    isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                  }`}
+                  style={{ transitionDelay: `${index * 80}ms` }}
+                >
+                  <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl ${amenity.color} mb-4 group-hover:scale-110 boty-transition`}>
+                    <amenity.icon className="w-6 h-6" />
+                  </div>
+                  <h3 className="font-serif text-lg text-foreground mb-1.5">{amenity.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{amenity.description}</p>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+
+          {/* Desktop grid */}
+          <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+            {amenities.map((amenity, index) => (
+              <div
+                key={amenity.title}
+                className={`group relative p-6 rounded-2xl bg-background boty-shadow boty-transition hover:scale-[1.02] transition-all duration-700 ease-out ${
+                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                }`}
+                style={{ transitionDelay: `${index * 80}ms` }}
+              >
+                <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl ${amenity.color} mb-4 group-hover:scale-110 boty-transition`}>
+                  <amenity.icon className="w-6 h-6" />
+                </div>
+                <h3 className="font-serif text-lg text-foreground mb-1.5">{amenity.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{amenity.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
+
+      <style jsx>{`
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+        .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+      `}</style>
     </section>
   )
 }

@@ -3,6 +3,7 @@ import { Hero } from "@/components/boty/hero"
 import { TrustBadges } from "@/components/boty/trust-badges"
 import { FeatureSection } from "@/components/boty/feature-section"
 import { AboutSection } from "@/components/boty/about-section"
+import { CurriculumSection } from "@/components/boty/curriculum-section"
 import { HostelSection } from "@/components/boty/hostel-section"
 import { AmenitiesSection } from "@/components/boty/amenities-section"
 import { ProductGrid } from "@/components/boty/product-grid"
@@ -20,6 +21,7 @@ export default function HomePage() {
       <TrustBadges />
       <FeatureSection />
       <AboutSection />
+      <CurriculumSection />
       <HostelSection />
       <AmenitiesSection />
       <ProductGrid />

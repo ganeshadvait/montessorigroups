@@ -1,3 +1,4 @@
+//File :- components/boty/feature-section.tsx
 "use client"
 
 import { useEffect, useRef, useState } from "react"
@@ -90,25 +91,59 @@ export function FeatureSection() {
           </p>
         </div>
 
-        {/* Feature Grid */}
-        <div ref={gridRef} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((feature, index) => (
-            <div
-              key={feature.title}
-              className={`group p-8 rounded-2xl bg-background boty-shadow boty-transition hover:scale-[1.02] transition-all duration-700 ease-out ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-              }`}
-              style={{ transitionDelay: `${index * 100}ms` }}
-            >
-              <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-primary/10 mb-5 group-hover:bg-primary/20 boty-transition">
-                <feature.icon className="w-7 h-7 text-primary" />
-              </div>
-              <h3 className="font-serif text-xl text-foreground mb-2">{feature.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
+        {/* Feature — Mobile: horizontal scroll, Desktop: grid */}
+        <div ref={gridRef}>
+          {/* Mobile horizontal scroll */}
+          <div className="sm:hidden -mx-6 px-6 overflow-x-auto scrollbar-hide">
+            <div className="flex gap-5 pb-4 w-max">
+              {features.map((feature, index) => (
+                <div
+                  key={feature.title}
+                  className={`group p-8 rounded-2xl bg-background boty-shadow boty-transition w-[280px] flex-shrink-0 transition-all duration-700 ease-out ${
+                    isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                  }`}
+                  style={{ transitionDelay: `${index * 100}ms` }}
+                >
+                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-primary/10 mb-5 group-hover:bg-primary/20 boty-transition">
+                    <feature.icon className="w-7 h-7 text-primary" />
+                  </div>
+                  <h3 className="font-serif text-xl text-foreground mb-2">{feature.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+
+          {/* Desktop grid */}
+          <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {features.map((feature, index) => (
+              <div
+                key={feature.title}
+                className={`group p-8 rounded-2xl bg-background boty-shadow boty-transition hover:scale-[1.02] transition-all duration-700 ease-out ${
+                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                }`}
+                style={{ transitionDelay: `${index * 100}ms` }}
+              >
+                <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-primary/10 mb-5 group-hover:bg-primary/20 boty-transition">
+                  <feature.icon className="w-7 h-7 text-primary" />
+                </div>
+                <h3 className="font-serif text-xl text-foreground mb-2">{feature.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
+
+      <style jsx>{`
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+        .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+      `}</style>
     </section>
   )
 }

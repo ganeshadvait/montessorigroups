@@ -1,25 +1,22 @@
+//File: components/boty/doctors-section.tsx
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { MapPin, Phone, Mail } from "lucide-react"
+import { MapPin, Phone, Navigation, Mail, Clock } from "lucide-react"
 
-const branches = [
-  { name: "Yellandu", phone: "+919876543210" },
-  { name: "Bhupalpally", phone: "+919876543211" },
-  { name: "Bhongir", phone: "+919876543212" },
-  { name: "Bibinagar", phone: "+919876543213" },
-  { name: "Huzurabad", phone: "+919876543214" },
-  { name: "Manuguru", phone: "+919876543215" },
-  { name: "Valigonda", phone: "+919876543216" },
-  { name: "Thirumalagiri", phone: "+919876543217" },
-  { name: "Zaheerabad", phone: "+919876543218" },
-  { name: "Tekulapally", phone: "+919876543219" },
-  { name: "Karepally", phone: "+919876543220" },
-  { name: "Kataram", phone: "+919876543221" },
-  { name: "Husnabad", phone: "+919876543222" },
-  { name: "Yellapur", phone: "+919876543223" },
-  { name: "Kodada", phone: "+919876543224" },
-]
+const branch = {
+  name: "Yellandu",
+  address:
+    "Sri Montessori High School, Main Road, Near Bus Stand, Yellandu, Bhadradri Kothagudem District, Telangana — 507123",
+  phone: "+919876543210",
+  email: "info@montessoriyellandu.edu",
+  hours: "Mon – Sat : 8:30 AM – 4:30 PM",
+  // Random Yellandu coordinates for embed
+  mapEmbed:
+    "https://www.google.com/maps?q=Yellandu,+Telangana&hl=en&z=14&output=embed",
+  directionsUrl:
+    "https://www.google.com/maps/dir/?api=1&destination=Yellandu+Telangana",
+}
 
 export function DoctorsSection() {
   const [isVisible, setIsVisible] = useState(false)
@@ -59,7 +56,7 @@ export function DoctorsSection() {
             }`}
             style={headerVisible ? { animationDelay: "0.2s", animationFillMode: "forwards" } : {}}
           >
-            Our Branches
+            Visit Our Campus
           </span>
           <h2
             className={`font-serif text-3xl md:text-4xl lg:text-5xl leading-tight text-foreground mb-4 ${
@@ -67,7 +64,7 @@ export function DoctorsSection() {
             }`}
             style={headerVisible ? { animationDelay: "0.4s", animationFillMode: "forwards" } : {}}
           >
-            15 Campuses Across Telangana
+            Find Us in {branch.name}
           </h2>
           <p
             className={`text-lg text-muted-foreground ${
@@ -75,57 +72,109 @@ export function DoctorsSection() {
             }`}
             style={headerVisible ? { animationDelay: "0.6s", animationFillMode: "forwards" } : {}}
           >
-            Quality education close to your home. Find a branch near you.
+            We&apos;d love to welcome you to our campus. Drop in for a tour or get in touch.
           </p>
         </div>
 
-        {/* Branch Grid */}
+        {/* Location Card */}
         <div
           ref={sectionRef}
-          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4"
+          className={`grid grid-cols-1 lg:grid-cols-2 gap-0 rounded-3xl overflow-hidden bg-card boty-shadow transition-all duration-700 ease-out ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
         >
-          {branches.map((branch, index) => (
-            <div
-              key={branch.name}
-              className={`group relative bg-card rounded-2xl p-5 boty-shadow boty-transition hover:scale-[1.03] hover:bg-primary hover:text-primary-foreground cursor-pointer transition-all duration-700 ease-out ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-              }`}
-              style={{ transitionDelay: `${index * 50}ms` }}
-            >
-              <div className="flex items-start gap-2 mb-3">
-                <MapPin className="w-4 h-4 text-primary group-hover:text-primary-foreground flex-shrink-0 mt-0.5" />
-                <h3 className="font-serif text-base font-medium">{branch.name}</h3>
+          {/* Left — Google Map */}
+          <div className="relative h-[350px] lg:h-[500px] w-full">
+            <iframe
+              src={branch.mapEmbed}
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title={`${branch.name} location map`}
+            />
+          </div>
+
+          {/* Right — Address & CTAs */}
+          <div className="p-8 lg:p-12 flex flex-col justify-center">
+            <div className="inline-flex items-center gap-2 mb-4">
+              <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
+              <span className="text-xs tracking-[0.2em] uppercase text-primary font-medium">
+                Our Branch
+              </span>
+            </div>
+
+            <h3 className="font-serif text-3xl md:text-4xl text-foreground mb-6">
+              Montessori School, {branch.name}
+            </h3>
+
+            <div className="space-y-4 mb-8">
+              <div className="flex items-start gap-3">
+                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-wider text-muted-foreground mb-1">
+                    Address
+                  </p>
+                  <p className="text-base text-foreground leading-relaxed">
+                    {branch.address}
+                  </p>
+                </div>
               </div>
-              <div className="flex gap-2">
-                <a
-                  href={`tel:${branch.phone}`}
-                  className="w-8 h-8 rounded-full bg-primary/10 group-hover:bg-primary-foreground/20 flex items-center justify-center boty-transition"
-                  aria-label={`Call ${branch.name}`}
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  <Phone className="w-3.5 h-3.5 text-primary group-hover:text-primary-foreground" />
-                </a>
-                <a
-                  href={`mailto:info@montessori${branch.name.toLowerCase()}.edu`}
-                  className="w-8 h-8 rounded-full bg-primary/10 group-hover:bg-primary-foreground/20 flex items-center justify-center boty-transition"
-                  aria-label={`Email ${branch.name}`}
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  <Mail className="w-3.5 h-3.5 text-primary group-hover:text-primary-foreground" />
-                </a>
+
+              <div className="flex items-start gap-3">
+                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <Clock className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-wider text-muted-foreground mb-1">
+                    Office Hours
+                  </p>
+                  <p className="text-base text-foreground">{branch.hours}</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-wider text-muted-foreground mb-1">
+                    Email
+                  </p>
+                  <a
+                    href={`mailto:${branch.email}`}
+                    className="text-base text-foreground hover:text-primary boty-transition"
+                  >
+                    {branch.email}
+                  </a>
+                </div>
               </div>
             </div>
-          ))}
-        </div>
 
-        {/* CTA */}
-        <div className="text-center mt-12">
-          <a
-            href="#enquiry"
-            className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-full text-sm font-medium tracking-wide boty-transition hover:bg-primary/90"
-          >
-            Enquire at Your Nearest Branch
-          </a>
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row gap-3">
+              <a
+                href={branch.directionsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-4 rounded-full text-sm font-medium tracking-wide boty-transition hover:bg-primary/90 flex-1"
+              >
+                <Navigation className="w-4 h-4" />
+                Get Directions
+              </a>
+              <a
+                href={`tel:${branch.phone}`}
+                className="inline-flex items-center justify-center gap-2 bg-secondary text-secondary-foreground px-6 py-4 rounded-full text-sm font-medium tracking-wide boty-transition hover:brightness-110 flex-1"
+              >
+                <Phone className="w-4 h-4" />
+                Call Now
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
