@@ -18,12 +18,7 @@ import {
 } from "lucide-react"
 
 const amenities = [
-  {
-    icon: Monitor,
-    title: "Smart Classrooms",
-    description: "Interactive digital boards and projectors in every classroom for engaging, modern teaching.",
-    color: "bg-primary/10 text-primary",
-  },
+  
   {
     icon: FlaskConical,
     title: "Science Laboratories",
