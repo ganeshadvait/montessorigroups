@@ -4,12 +4,12 @@ import { useEffect, useRef, useState } from "react"
 
 const stats = [
   {
-    image: "/10,000+ Students.png",
+    image: "/thousand  Students.png",
     value: "10,000+",
     label: "Students & Alumni",
   },
   {
-    image: "/33+ Years.png",
+    image: "/years of excellence.png",
     value: "30+",
     label: "Experienced Faculty",
   },

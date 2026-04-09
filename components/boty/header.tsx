@@ -16,16 +16,21 @@ export function Header() {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-background/95 backdrop-blur-md shadow-md border-b border-border/50" : "bg-transparent"}`}>
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-18">
-        <Link href="/" className="flex items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-14 sm:h-16 md:h-18">
+        <Link href="/" className="flex items-center gap-1.5 sm:gap-2 shrink-0">
           <img
             src="/School Logo_MPS.png"
             alt="Montessori Groups of Schools"
-            className="h-16 w-auto object-contain"
+            className="h-10 sm:h-12 md:h-16 w-auto object-contain"
+          />
+          <img
+            src="/CBSE LOGO.svg"
+            alt="CBSE"
+            className="h-8 sm:h-10 md:h-12 w-auto object-contain"
           />
         </Link>
 
-        <div className="hidden md:flex items-center gap-8 text-sm font-medium">
+        <div className="hidden lg:flex items-center gap-6 xl:gap-8 text-sm font-medium">
           <a href="#why-us" className={`boty-transition ${scrolled ? "text-foreground/70 hover:text-primary" : "text-white/80 hover:text-white"}`}>Why Us</a>
           <a href="#founder" className={`boty-transition ${scrolled ? "text-foreground/70 hover:text-primary" : "text-white/80 hover:text-white"}`}>Our Founder</a>
           <a href="#testimonials" className={`boty-transition ${scrolled ? "text-foreground/70 hover:text-primary" : "text-white/80 hover:text-white"}`}>Testimonials</a>
@@ -41,7 +46,7 @@ export function Header() {
           </a>
           <a
             href="#enquiry"
-            className="inline-flex items-center gap-2 rounded-full bg-secondary px-6 py-2.5 text-secondary-foreground font-semibold hover:brightness-110 boty-transition shadow-lg"
+            className="inline-flex items-center gap-2 rounded-full bg-secondary px-5 py-2 xl:px-6 xl:py-2.5 text-secondary-foreground font-semibold hover:brightness-110 boty-transition shadow-lg"
           >
             Apply Now
           </a>
@@ -49,7 +54,7 @@ export function Header() {
 
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden"
+          className="lg:hidden p-2"
           aria-label="Toggle menu"
         >
           {open ? (
@@ -61,7 +66,7 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="md:hidden bg-background border-t border-border px-6 py-4 space-y-1 shadow-lg">
+        <div className="lg:hidden bg-background border-t border-border px-4 sm:px-6 py-4 space-y-1 shadow-lg">
           <a href="#why-us" className="block py-3 text-foreground hover:text-primary boty-transition" onClick={() => setOpen(false)}>Why Us</a>
           <a href="#founder" className="block py-3 text-foreground hover:text-primary boty-transition" onClick={() => setOpen(false)}>Our Founder</a>
           <a href="#branches" className="block py-3 text-foreground hover:text-primary boty-transition" onClick={() => setOpen(false)}>Branches</a>
