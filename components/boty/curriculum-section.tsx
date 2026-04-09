@@ -9,7 +9,7 @@ const wings = [
     grade: "(Classes Jr. KG to Sr. KG)",
     color: "#5BB5B0",
     bgColor: "#D4ECEA",
-    image: "https://images.unsplash.com/photo-1587653263995-422546a7a569?w=600&q=80",
+    image: "/pre primary wing.svg",
     alt: "Pre-primary students learning",
     description:
       "The Pre-Primary Wing focuses on joyful learning through play, exploration, and imagination. Our early learners engage in hands-on activities using Montessori materials and interactive tools that make learning fun and meaningful. The emphasis is on developing fine motor skills, communication, social interaction, and emotional growth.",
@@ -21,7 +21,7 @@ const wings = [
     grade: "(Grade I to V)",
     color: "#E85A6B",
     bgColor: "#FBD5DA",
-    image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80",
+    image: "/primary wing.svg",
     alt: "Primary student studying",
     description:
       "The Primary Wing lays the foundation for academic excellence and curiosity. At this stage, formal learning begins with an emphasis on conceptual understanding rather than rote memorization. Interactive digital classrooms, activity-based learning, and integrated projects make lessons engaging and effective.",
@@ -33,7 +33,7 @@ const wings = [
     grade: "(Grade VI to X)",
     color: "#F4A93D",
     bgColor: "#FCE7C2",
-    image: "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=600&q=80",
+    image: "/high school.svg",
     alt: "High school students",
     description:
       "The High School curriculum is designed to prepare students for academic success and future challenges under the CBSE framework. The focus is on developing analytical, problem-solving, and leadership skills.",
@@ -72,7 +72,7 @@ export function CurriculumSection() {
   }, [])
 
   return (
-    <section id="curriculum" className="py-24 bg-background scroll-mt-20 overflow-hidden">
+    <section id="curriculum" className="py-12 md:py-24 bg-background scroll-mt-20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <div ref={headerRef} className="text-center mb-20 max-w-2xl mx-auto">
