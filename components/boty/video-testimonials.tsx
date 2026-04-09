@@ -14,7 +14,7 @@ const videos: VideoTestimonial[] = [
     id: 1,
     thumbnail:
       "https://images.unsplash.com/photo-1544717297-fa95b6ee9643?w=600&h=800&fit=crop",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    videoUrl: "/Patent Testimonials MPS 1.webp",
   },
   {
     id: 2,

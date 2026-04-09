@@ -26,8 +26,8 @@ export default function HomePage() {
       <FeatureSection />
       <DirectorSection />
       <HostelSection />
-      <ProductGrid />
-      <VideoTestimonials />
+      {/* <ProductGrid /> */}
+      {/* <VideoTestimonials /> */}
       <Testimonials />
       <DoctorsSection />      
       <BookAppointment />

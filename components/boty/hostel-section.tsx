@@ -2,54 +2,58 @@
 
 import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
-import { Bed, Utensils, ShieldCheck, Wifi, BookOpen, Users, Clock, Heart } from "lucide-react"
-
 const hostelFeatures = [
   {
-    icon: Bed,
+    image: "/Comfortable Rooms.png",
     title: "Comfortable Rooms",
     description: "Spacious, well-ventilated dormitories with individual study desks and storage for every student.",
+    color: "bg-primary/10 text-primary",
   },
   {
-    icon: Utensils,
+    image: "/Nutritious Meals.png",
     title: "Nutritious Meals",
     description: "Hygienic kitchen serving balanced vegetarian & non-vegetarian meals — breakfast, lunch, snacks & dinner.",
+    color: "bg-secondary/20 text-secondary-foreground",
   },
   {
-    icon: ShieldCheck,
+    image: "/24_7 Security.png",
     title: "24/7 Security",
     description: "Round-the-clock CCTV surveillance, warden supervision, and gated campus for complete safety.",
+    color: "bg-primary/10 text-primary",
   },
   {
-    icon: Wifi,
+    image: "/Digital Access.png",
     title: "Digital Access",
     description: "Wi-Fi enabled study halls with computers for research, online classes, and digital learning resources.",
+    color: "bg-secondary/20 text-secondary-foreground",
   },
   {
-    icon: BookOpen,
+    image: "/Supervised Study Hours.png",
     title: "Supervised Study Hours",
     description: "Dedicated evening study sessions with faculty guidance to ensure consistent academic progress.",
+    color: "bg-primary/10 text-primary",
   },
   {
-    icon: Heart,
+    image: "/Home Away From Home.png",
     title: "Home Away From Home",
     description: "Trained house parents who care for every child's emotional well-being, health, and personal growth.",
+    color: "bg-secondary/20 text-secondary-foreground",
   },
 ]
 
 const hostelImages = [
   {
-    src: "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=600&q=80",
+    src: "/hostel.svg",
     alt: "Clean hostel dormitory room",
     label: "Boys & Girls Hostels",
   },
   {
-    src: "https://images.unsplash.com/photo-1567521464027-f127ff144326?w=600&q=80",
+    src: "/dining hall.svg",
     alt: "Hostel dining hall",
     label: "Spacious Dining Hall",
   },
   {
-    src: "https://images.unsplash.com/photo-1588072432836-e10032774350?w=600&q=80",
+    src: "/recreation room.svg",
     alt: "Students studying in common room",
     label: "Study & Recreation Area",
   },
@@ -85,7 +89,7 @@ export function HostelSection() {
   }, [])
 
   return (
-    <section id="hostel" className="py-24 bg-background scroll-mt-20">
+    <section id="hostel" className="py-12 md:py-24 bg-background scroll-mt-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <div ref={headerRef} className="text-center mb-16 max-w-2xl mx-auto">
@@ -143,8 +147,9 @@ export function HostelSection() {
               }`}
               style={{ transitionDelay: `${(index + 3) * 100}ms` }}
             >
-              <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-secondary/10 mb-5 group-hover:bg-primary/20 boty-transition">
-                <feature.icon className="w-7 h-7 text-primary" />
+              <div className={`inline-flex items-center justify-center w-14 h-14 rounded-2xl ${feature.color} mb-5 boty-transition`}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={feature.image} alt={feature.title} className="w-7 h-7 object-cover" />
               </div>
               <h3 className="font-serif text-xl text-foreground mb-2">{feature.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>

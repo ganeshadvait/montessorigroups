@@ -2,126 +2,101 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import {
-  BookOpen,
-  Lightbulb,
-  Shield,
-  Heart,
-  Monitor,
-  Trophy,
-  FlaskConical,
-  Laptop,
-  Library,
-  Dumbbell,
-  Waves,
-  Music,
-  Bus,
-  Stethoscope,
-  ShieldCheck,
-  TreePine,
-  GraduationCap,
-} from "lucide-react"
 
 const features = [
   {
-    icon: BookOpen,
     title: "CBSE Curriculum",
+    image: "/CBSE Curriculum.png",
     description: "Nationally recognized curriculum ensuring academic rigor and comprehensive learning outcomes.",
     color: "bg-primary/10 text-primary",
   },
   {
-    icon: Lightbulb,
-    title: "Montessori Methodology",
-    description: "Child-centered approach that fosters curiosity, independence, and a lifelong love for learning.",
-    color: "bg-secondary/20 text-secondary-foreground",
-  },
-  {
-    icon: Monitor,
     title: "Smart Classrooms",
+    image: "/Smart Classrooms.png",
     description: "State-of-the-art digital learning tools and modern facilities across all 15 campuses.",
     color: "bg-primary/10 text-primary",
   },
   {
-    icon: Heart,
     title: "Holistic Development",
+    image: "/Holistic Development.png",
     description: "Equal focus on academics, sports, arts, and character building for well-rounded growth.",
     color: "bg-secondary/20 text-secondary-foreground",
   },
   {
-    icon: Shield,
     title: "Safe & Nurturing",
+    image: "/Safe & Nurturing.png",
     description: "CCTV-monitored campuses with trained staff ensuring every child feels secure and valued.",
     color: "bg-primary/10 text-primary",
   },
   {
-    icon: Trophy,
     title: "Proven Results",
+    image: "/Proven Results.png",
     description: "Consistent board exam excellence and competitive exam success across all branches.",
     color: "bg-secondary/20 text-secondary-foreground",
   },
   {
-    icon: FlaskConical,
     title: "Science Laboratories",
+    image: "/Science Laboratories.png",
     description: "Well-equipped Physics, Chemistry & Biology labs for hands-on practical learning.",
     color: "bg-secondary/20 text-secondary-foreground",
   },
   {
-    icon: Laptop,
     title: "Computer Lab",
+    image: "/Computer Lab.png",
     description: "Modern computer labs with high-speed internet for coding, research, and digital literacy.",
     color: "bg-primary/10 text-primary",
   },
   {
-    icon: Library,
     title: "Library & Reading Room",
+    image: "/Library & Reading Room.png",
     description: "Extensive collection of books, journals, and digital resources to foster a reading culture.",
     color: "bg-secondary/20 text-secondary-foreground",
   },
   {
-    icon: Dumbbell,
     title: "Sports Facilities",
+    image: "/Sports Facilities.png",
     description: "Cricket, volleyball, basketball courts, and indoor games — promoting fitness and team spirit.",
     color: "bg-primary/10 text-primary",
   },
   {
-    icon: Waves,
     title: "Swimming Pool",
+    image: "/Swimming Pool.png",
     description: "Safe, supervised swimming pool for physical fitness and recreational activities.",
     color: "bg-secondary/20 text-secondary-foreground",
   },
   {
-    icon: Music,
     title: "Music & Dance Room",
+    image: "/Music & Dance Room.png",
     description: "Dedicated spaces for vocal, instrumental music, and classical/western dance training.",
     color: "bg-primary/10 text-primary",
   },
   {
-    icon: Bus,
     title: "Transport Facility",
+    image: "/Transport Facility.png",
     description: "GPS-tracked school buses covering all major routes ensuring safe and timely commute.",
     color: "bg-secondary/20 text-secondary-foreground",
   },
   {
-    icon: Stethoscope,
     title: "Medical Room",
+    image: "/Medical Room.png",
     description: "On-campus first aid and regular health check-ups with a trained nurse on duty.",
     color: "bg-primary/10 text-primary",
   },
   {
-    icon: ShieldCheck,
     title: "CCTV Surveillance",
+    image: "/CCTV Surveillance.png",
     description: "Complete campus coverage with CCTV cameras monitored in real-time for child safety.",
     color: "bg-secondary/20 text-secondary-foreground",
   },
   {
-    icon: TreePine,
     title: "Green Campus",
+    image: "/Green Campus.png",
     description: "Eco-friendly, spacious campus with gardens, play areas, and open-air learning spaces.",
     color: "bg-primary/10 text-primary",
   },
   {
-    icon: GraduationCap,
     title: "Activity Halls",
+    image: "/Activity Halls.png",
     description: "Multi-purpose halls for assemblies, cultural events, seminars, and parent-teacher meetings.",
     color: "bg-secondary/20 text-secondary-foreground",
   },
@@ -161,7 +136,7 @@ export function FeatureSection() {
   }, [])
 
   return (
-    <section id="why-us" className="py-24 bg-card scroll-mt-20">
+    <section id="why-us" className="py-12 md:py-24 bg-card scroll-mt-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <div ref={headerRef} className="text-center mb-16 max-w-2xl mx-auto">
@@ -181,7 +156,7 @@ export function FeatureSection() {
             className={`text-lg text-muted-foreground ${headerVisible ? "animate-blur-in opacity-0" : "opacity-0"}`}
             style={headerVisible ? { animationDelay: "0.6s", animationFillMode: "forwards" } : {}}
           >
-            33 years of trust. A proven system that nurtures every child into a confident, capable individual.
+            A legacy of trust and a proven system that nurtures every child into a confident, capable individual.
           </p>
         </div>
 
@@ -199,7 +174,8 @@ export function FeatureSection() {
                   style={{ transitionDelay: `${index * 100}ms` }}
                 >
                   <div className={`inline-flex items-center justify-center w-14 h-14 rounded-2xl ${feature.color} mb-5 boty-transition`}>
-                    <feature.icon className="w-7 h-7" />
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={feature.image} alt={feature.title} className="w-7 h-7 object-cover" />
                   </div>
                   <h3 className="font-serif text-xl text-foreground mb-2">{feature.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
@@ -219,7 +195,8 @@ export function FeatureSection() {
                 style={{ transitionDelay: `${(index % INITIAL_COUNT) * 100}ms` }}
               >
                 <div className={`inline-flex items-center justify-center w-14 h-14 rounded-2xl ${feature.color} mb-5 boty-transition`}>
-                  <feature.icon className="w-7 h-7" />
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={feature.image} alt={feature.title} className="w-7 h-7 object-cover" />
                 </div>
                 <h3 className="font-serif text-xl text-foreground mb-2">{feature.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>

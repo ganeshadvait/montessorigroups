@@ -16,7 +16,7 @@ const grades = [
   "Class 4 – 5",
   "Class 6 – 8",
   "Class 9 – 10",
-  "Class 11 – 12",
+  // "Class 11 – 12",
 ]
 
 export function BookAppointment() {
@@ -43,7 +43,7 @@ export function BookAppointment() {
   }
 
   return (
-    <section id="enquiry" className="py-24 bg-card scroll-mt-20">
+    <section id="enquiry" className="py-12 md:py-24 bg-card scroll-mt-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div
           ref={sectionRef}
@@ -58,7 +58,7 @@ export function BookAppointment() {
             <div className="relative">
               <div className="relative w-full h-80 lg:h-[520px] rounded-3xl overflow-hidden boty-shadow">
                 <Image
-                  src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=90"
+                  src="/enquiry form image.svg"
                   alt="Happy students at Montessori campus"
                   fill
                   className="object-cover"
@@ -81,15 +81,24 @@ export function BookAppointment() {
 
             {/* Quick Contact */}
             <div className="flex flex-wrap gap-3 mt-6">
-              <a
-                href="tel:+919876543210"
-                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-3 rounded-full text-sm font-medium boty-transition hover:bg-primary/90"
+              {/* <a
+                href="tel:7700051010"
+                className="md:hidden inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-3 rounded-full text-sm font-medium boty-transition hover:bg-primary/90"
               >
                 <Phone className="w-4 h-4" />
                 Call Admissions
-              </a>
+              </a> */}
+              {/* <a
+                href="https://wa.me/917700051010?text=Hi%2C%20I%27m%20interested%20in%20admissions"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden md:inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-3 rounded-full text-sm font-medium boty-transition hover:bg-primary/90"
+              >
+                <Phone className="w-4 h-4" />
+                WhatsApp Admissions
+              </a> */}
               <a
-                href="https://wa.me/919876543210?text=Hi%2C%20I%27m%20interested%20in%20admissions"
+                href="https://wa.me/917700051010?text=Hi%2C%20I%27m%20interested%20in%20admissions"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-green-600 text-white px-5 py-3 rounded-full text-sm font-medium boty-transition hover:bg-green-700"
@@ -181,7 +190,7 @@ export function BookAppointment() {
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
+                  {/* <div>
                     <label className="block text-sm font-medium text-foreground mb-2">Select Branch *</label>
                     <select
                       required
@@ -192,7 +201,7 @@ export function BookAppointment() {
                         <option key={b} value={b}>{b}</option>
                       ))}
                     </select>
-                  </div>
+                  </div> */}
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">Class / Grade *</label>
                     <select
@@ -211,7 +220,7 @@ export function BookAppointment() {
                   type="submit"
                   className="w-full flex items-center justify-center gap-3 bg-secondary text-secondary-foreground py-4 rounded-full font-semibold tracking-wide boty-transition hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 mt-2 text-lg shadow-lg"
                 >
-                  Submit Enquiry — Get Callback
+                  Submit Details  — Get Callback
                   <ArrowRight className="w-5 h-5" />
                 </button>
 

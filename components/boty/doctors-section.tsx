@@ -5,17 +5,17 @@ import { useEffect, useRef, useState } from "react"
 import { MapPin, Phone, Navigation, Mail, Clock } from "lucide-react"
 
 const branch = {
-  name: "Yellandu",
+  name: "Yellapur",
   address:
-    "Sri Montessori High School, Main Road, Near Bus Stand, Yellandu, Bhadradri Kothagudem District, Telangana — 507123",
-  phone: "+919876543210",
-  email: "info@montessoriyellandu.edu",
+    "Bavupet, X Road, Yellapur, Telangana 506371",
+  phone: "7700051010",
+  email: "info@montessorijnprime.com",
   hours: "Mon – Sat : 8:30 AM – 4:30 PM",
   // Random Yellandu coordinates for embed
   mapEmbed:
-    "https://www.google.com/maps?q=Yellandu,+Telangana&hl=en&z=14&output=embed",
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3792.5927787991886!2d79.4911602!3d18.090397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a334920b900d44b%3A0x7772fea1f8980e51!2sMontessori%20Prime%20School!5e0!3m2!1sen!2sin!4v1775727153886!5m2!1sen!2sin",
   directionsUrl:
-    "https://www.google.com/maps/dir/?api=1&destination=Yellandu+Telangana",
+    "https://maps.app.goo.gl/LKDPGMnGmtyx8Tsn7",
 }
 
 export function DoctorsSection() {
@@ -46,7 +46,7 @@ export function DoctorsSection() {
   }, [])
 
   return (
-    <section id="branches" className="py-24 bg-background scroll-mt-20">
+    <section id="branches" className="py-12 md:py-24 bg-background scroll-mt-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <div ref={headerRef} className="text-center mb-16 max-w-2xl mx-auto">
@@ -107,7 +107,7 @@ export function DoctorsSection() {
             </div>
 
             <h3 className="font-serif text-3xl md:text-4xl text-foreground mb-6">
-              Montessori School, {branch.name}
+              Montessori Prime School, {branch.name}
             </h3>
 
             <div className="space-y-4 mb-8">
@@ -168,10 +168,19 @@ export function DoctorsSection() {
               </a>
               <a
                 href={`tel:${branch.phone}`}
-                className="inline-flex items-center justify-center gap-2 bg-secondary text-secondary-foreground px-6 py-4 rounded-full text-sm font-medium tracking-wide boty-transition hover:brightness-110 flex-1"
+                className="md:hidden inline-flex items-center justify-center gap-2 bg-secondary text-secondary-foreground px-6 py-4 rounded-full text-sm font-medium tracking-wide boty-transition hover:brightness-110 flex-1"
               >
                 <Phone className="w-4 h-4" />
                 Call Now
+              </a>
+              <a
+                href={`https://wa.me/91${branch.phone}?text=Hi%2C%20I%27m%20interested%20in%20admissions`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden md:inline-flex items-center justify-center gap-2 bg-secondary text-secondary-foreground px-6 py-4 rounded-full text-sm font-medium tracking-wide boty-transition hover:brightness-110 flex-1"
+              >
+                <Phone className="w-4 h-4" />
+                WhatsApp Us
               </a>
             </div>
           </div>

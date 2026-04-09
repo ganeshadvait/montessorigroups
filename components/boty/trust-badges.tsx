@@ -1,28 +1,27 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { GraduationCap, MapPin, Users, Award } from "lucide-react"
 
 const stats = [
   {
-    icon: Award,
-    value: "33+",
-    label: "Years of Excellence",
-  },
-  {
-    icon: MapPin,
-    value: "15",
-    label: "Campuses in Telangana",
-  },
-  {
-    icon: Users,
+    image: "/10,000+ Students & Alumni.png",
     value: "10,000+",
     label: "Students & Alumni",
   },
   {
-    icon: GraduationCap,
-    value: "500+",
+    image: "/500+ Experienced Faculty.png",
+    value: "30+",
     label: "Experienced Faculty",
+  },
+  {
+    image: "/LAND.svg",
+    value: "9",
+    label: "Acres of Campus",
+  },
+  {
+    image: "/CLASS.svg",
+    value: "KG - XII",
+    label: "Classes Offered",
   },
 ]
 
@@ -60,7 +59,8 @@ export function TrustBadges() {
               }`}
               style={{ transitionDelay: `${index * 120}ms` }}
             >
-              <stat.icon className="text-[#DD3E74] mb-3 mx-auto w-8 h-8 md:w-10 md:h-10" strokeWidth={1.5} />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={stat.image} alt={stat.label} className="mb-3 mx-auto w-8 h-8 md:w-10 md:h-10 object-contain" />
               <h3 className="font-serif text-3xl md:text-4xl text-foreground mb-1 font-bold">{stat.value}</h3>
               <p className="text-xs md:text-sm text-muted-foreground">{stat.label}</p>
             </div>

@@ -22,7 +22,7 @@ export function CTABanner() {
   }, [])
 
   return (
-    <section className="py-24 bg-card">
+    <section className="py-12 md:py-24 bg-card">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div
           ref={bannerRef}
@@ -32,7 +32,7 @@ export function CTABanner() {
         >
           {/* Background Image */}
           <Image
-            src="https://images.unsplash.com/photo-1577896851231-70ef18881754?w=1600&q=90"
+            src="/footer image.svg"
             alt="Students graduating"
             fill
             className="object-cover"
@@ -42,7 +42,7 @@ export function CTABanner() {
           <div className="relative z-10 max-w-xl">
             <span className="inline-flex items-center gap-2 rounded-full bg-secondary/90 px-4 py-2 mb-6 text-sm font-semibold text-secondary-foreground">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              Admissions Closing Soon
+              Admissions are Open for 2026–2027
             </span>
 
             <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl text-white mb-4 leading-tight">
@@ -63,11 +63,20 @@ export function CTABanner() {
                 <ArrowRight className="w-5 h-5" />
               </a>
               <a
-                href="tel:+919876543210"
-                className="inline-flex items-center justify-center gap-2 border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 boty-transition"
+                href="tel:7700051010"
+                className="md:hidden inline-flex items-center justify-center gap-2 border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 boty-transition"
               >
                 <Phone className="w-5 h-5" />
-                Call: +91 98765 43210
+                Call: +91 77000 51010
+              </a>
+              <a
+                href="https://wa.me/917700051010?text=Hi%2C%20I%27m%20interested%20in%20admissions"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden md:inline-flex items-center justify-center gap-2 border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 boty-transition"
+              >
+                <Phone className="w-5 h-5" />
+                WhatsApp: +91 77000 51010
               </a>
             </div>
           </div>

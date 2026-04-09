@@ -8,63 +8,63 @@ const testimonials = [
     id: 1,
     name: "Lakshmi Devi R.",
     role: "Parent, Class 8",
-    branch: "Yellandu",
+    branch: "Warangal",
     text: "My son's transformation has been remarkable. From a shy child to a confident speaker — the teachers truly care about every student's growth.",
   },
   {
     id: 2,
     name: "Ramesh Kumar P.",
     role: "Parent, Class 10",
-    branch: "Yellandu",
+    branch: "Yellapur",
     text: "The board exam results speak for themselves. My daughter scored 95% and credits her teachers for their dedicated coaching and support.",
   },
   {
     id: 3,
     name: "Sunita Reddy M.",
     role: "Parent, Class 5",
-    branch: "Yellandu",
+    branch: "Hanumakonda",
     text: "The Montessori approach makes learning joyful. My child actually looks forward to going to school every morning — as a parent, that's priceless.",
   },
   {
     id: 4,
     name: "Venkat Rao K.",
     role: "Parent, Class 12",
-    branch: "Yellandu",
+    branch: "Kazipet",
     text: "Both my children studied at Montessori. The values and discipline they learned here shaped them into responsible adults. Forever grateful.",
   },
   {
     id: 5,
     name: "Priya Sharma S.",
     role: "Parent, Class 3",
-    branch: "Yellandu",
+    branch: "Warangal",
     text: "Clean campus, caring teachers, and excellent facilities. The smart classroom technology keeps children engaged and excited about learning.",
   },
   {
     id: 6,
     name: "Nagaraju T.",
     role: "Parent, Class 7",
-    branch: "Yellandu",
+    branch: "Yellapur",
     text: "What impressed me most is the individual attention. The teachers know every child by name and understand their strengths and areas to improve.",
   },
   {
     id: 7,
     name: "Kavitha Nair B.",
     role: "Parent, Class 9",
-    branch: "Yellandu",
+    branch: "Kazipet",
     text: "The extracurricular activities are fantastic. My son excels in both academics and sports now. A truly holistic education system.",
   },
   {
     id: 8,
     name: "Srinivas G.",
     role: "Alumni, Batch 2018",
-    branch: "Yellandu",
+    branch: "Yellapur",
     text: "Montessori shaped who I am today. The values, friendships, and foundation I received here helped me succeed in engineering college.",
   },
   {
     id: 9,
     name: "Madhavi K.",
     role: "Parent, Class 6",
-    branch: "Yellandu",
+    branch: "Hanumakonda",
     text: "Affordable fees with premium quality education. The management truly cares about making quality education accessible to every family.",
   },
 ]
@@ -120,7 +120,7 @@ export function Testimonials() {
   }, [])
 
   return (
-    <section id="testimonials" className="py-24 bg-background overflow-hidden scroll-mt-20">
+    <section id="testimonials" className="py-12 md:py-24 bg-background overflow-hidden scroll-mt-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <div ref={headerRef} className="text-center mb-16">

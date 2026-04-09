@@ -57,8 +57,9 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-lg md:text-xl text-white/80 mb-8 max-w-xl"
           >
-            33+ years of nurturing excellence across 15 campuses in Telangana.
-            CBSE-affiliated education that builds confident, independent thinkers — not just toppers.
+            Providing CBSE-affiliated education that fosters confident, independent thinkers.
+Our focus is on developing well-rounded individuals, not just academic achievers.
+Empowering students to excel in life, both inside and outside the classroom.
           </motion.p>
 
           <motion.div
@@ -76,11 +77,20 @@ export function Hero() {
               Apply Now — Limited Seats
             </a>
             <a
-              href="tel:+919876543210"
-              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/30 px-8 py-4 text-white font-semibold text-lg hover:bg-white/10 boty-transition"
+              href="tel:7700051010"
+              className="md:hidden inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/30 px-8 py-4 text-white font-semibold text-lg hover:bg-white/10 boty-transition"
             >
               <Phone className="w-5 h-5" />
               Call Now
+            </a>
+            <a
+              href="https://wa.me/917700051010?text=Hi%2C%20I%27m%20interested%20in%20admissions"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden md:inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/30 px-8 py-4 text-white font-semibold text-lg hover:bg-white/10 boty-transition"
+            >
+              <Phone className="w-5 h-5" />
+              WhatsApp Us
             </a>
           </motion.div>
 
@@ -96,15 +106,15 @@ export function Hero() {
             </span>
             <span className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-secondary" />
-              15 Campuses
-            </span>
-            <span className="flex items-center gap-2">
-              <CheckCircle className="w-4 h-4 text-secondary" />
               Day & Residential
             </span>
             <span className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-secondary" />
-              33+ Years Legacy
+              IIT Foundation
+            </span>
+            <span className="flex items-center gap-2">
+              <CheckCircle className="w-4 h-4 text-secondary" />
+              AC Campus
             </span>
           </motion.div>
         </div>

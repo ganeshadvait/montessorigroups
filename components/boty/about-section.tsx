@@ -22,7 +22,7 @@ export function AboutSection() {
   }, []);
 
   return (
-    <section id="founder" className="py-24 bg-background scroll-mt-20">
+    <section className="py-12 md:py-24 bg-background scroll-mt-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div
           ref={sectionRef}
@@ -40,7 +40,7 @@ export function AboutSection() {
               {/* Main Image */}
               <div className="absolute inset-0 rounded-3xl overflow-hidden boty-shadow">
                 <Image
-                  src="https://images.unsplash.com/photo-1577896851231-70ef18881754?w=800&q=90"
+                  src="/school image.svg"
                   alt="Sri. Jose Nedumthundam — Founder & Chairman"
                   fill
                   className="object-cover"
@@ -48,7 +48,7 @@ export function AboutSection() {
               </div>
 
               {/* Experience Badge */}
-              <div className="absolute -bottom-4 -right-4 lg:bottom-8 lg:-right-6 bg-primary text-primary-foreground px-6 py-4 rounded-2xl boty-shadow z-10">
+              {/* <div className="absolute -bottom-4 -right-4 lg:bottom-8 lg:-right-6 bg-primary text-primary-foreground px-6 py-4 rounded-2xl boty-shadow z-10">
                 <div className="flex items-baseline gap-2">
                   <span className="text-4xl font-bold font-serif">33+</span>
                   <span className="text-sm">
@@ -57,13 +57,13 @@ export function AboutSection() {
                     of Excellence
                   </span>
                 </div>
-              </div>
+              </div> */}
 
               {/* Quote Badge */}
               <div className="absolute -top-4 -left-4 lg:top-8 lg:-left-6 bg-secondary text-secondary-foreground px-5 py-3 rounded-2xl boty-shadow z-10">
                 <Quote className="w-5 h-5 mb-1" />
                 <p className="text-xs font-medium max-w-[160px]">
-                  "Education is the most powerful tool to change lives."
+                  "Education is the bridge between where we are and where we want to be."
                 </p>
               </div>
             </div>
@@ -101,7 +101,7 @@ export function AboutSection() {
                   : {}
               }
             >
-              Sri. Jose Nedumthundam
+              Montessori Prime School
             </h2>
 
             <p
@@ -150,10 +150,19 @@ export function AboutSection() {
               }
             >
               <a
-                href="#enquiry"
-                className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-full text-sm font-medium tracking-wide boty-transition hover:bg-primary/90"
+                href="tel:7700051010"
+                className="md:hidden inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-full text-sm font-medium tracking-wide boty-transition hover:bg-primary/90"
               >
-                Join Our Legacy
+                Call Now
+                <ArrowRight className="w-4 h-4" />
+              </a>
+              <a
+                href="https://wa.me/917700051010?text=Hi%2C%20I%27m%20interested%20in%20admissions"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden md:inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-full text-sm font-medium tracking-wide boty-transition hover:bg-primary/90"
+              >
+                WhatsApp Us
                 <ArrowRight className="w-4 h-4" />
               </a>
             </div>

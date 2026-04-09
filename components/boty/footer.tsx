@@ -34,7 +34,7 @@ export function Footer() {
           <div className="col-span-2 md:col-span-1">
             <div className="mb-4">
               <img
-                src="/montessori Logo.png"
+                src="/School Logo_MPS.png"
                 alt="Montessori Groups of Schools"
                 className="h-14 w-auto object-contain"
               />
@@ -106,9 +106,13 @@ export function Footer() {
             <h3 className="font-medium text-white mb-4">Contact</h3>
             <ul className="space-y-3">
               <li>
-                <a href="tel:+919876543210" className="flex items-center gap-2 text-sm text-white/60 hover:text-white boty-transition">
+                <a href="tel:7700051010" className="md:hidden flex items-center gap-2 text-sm text-white/60 hover:text-white boty-transition">
                   <Phone className="w-4 h-4 flex-shrink-0" />
-                  +91 98765 43210
+                  +91 77000 51010
+                </a>
+                <a href="https://wa.me/917700051010?text=Hi%2C%20I%27m%20interested%20in%20admissions" target="_blank" rel="noopener noreferrer" className="hidden md:flex items-center gap-2 text-sm text-white/60 hover:text-white boty-transition">
+                  <Phone className="w-4 h-4 flex-shrink-0" />
+                  +91 77000 51010
                 </a>
               </li>
               <li>
@@ -116,12 +120,6 @@ export function Footer() {
                   <Mail className="w-4 h-4 flex-shrink-0" />
                   admissions@montessori.edu
                 </a>
-              </li>
-              <li>
-                <span className="flex items-start gap-2 text-sm text-white/60">
-                  <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
-                  15 Branches across Telangana
-                </span>
               </li>
             </ul>
           </div>
