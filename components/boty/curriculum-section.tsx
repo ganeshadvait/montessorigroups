@@ -9,7 +9,7 @@ const wings = [
     grade: "(Classes Jr. KG to Sr. KG)",
     color: "#5BB5B0",
     bgColor: "#D4ECEA",
-    image: "https://images.unsplash.com/photo-1587653263995-422546a7a569?w=600&q=80",
+    image: "/Pre- Primary Wing.webp",
     alt: "Pre-primary students learning",
     description:
       "The Pre-Primary Wing focuses on joyful learning through play, exploration, and imagination. Our early learners engage in hands-on activities using Montessori materials and interactive tools that make learning fun and meaningful. The emphasis is on developing fine motor skills, communication, social interaction, and emotional growth.",
@@ -21,7 +21,7 @@ const wings = [
     grade: "(Grade I to V)",
     color: "#E85A6B",
     bgColor: "#FBD5DA",
-    image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80",
+    image: "/Primary Wing.webp",
     alt: "Primary student studying",
     description:
       "The Primary Wing lays the foundation for academic excellence and curiosity. At this stage, formal learning begins with an emphasis on conceptual understanding rather than rote memorization. Interactive digital classrooms, activity-based learning, and integrated projects make lessons engaging and effective.",
