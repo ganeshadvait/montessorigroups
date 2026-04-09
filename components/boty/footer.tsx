@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { GraduationCap, Phone, Mail, MapPin, Instagram, Facebook, Youtube } from "lucide-react"
+import { Phone, Mail, MapPin, Instagram, Facebook, Youtube } from "lucide-react"
 
 const quickLinks = [
   { name: "Home", href: "/" },
@@ -32,14 +32,12 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-16">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 rounded-full bg-primary flex items-center justify-center">
-                <GraduationCap className="w-5 h-5 text-primary-foreground" />
-              </div>
-              <div className="leading-tight">
-                <span className="font-serif font-bold text-lg block text-white">Montessori</span>
-                <span className="text-[10px] tracking-widest uppercase text-white/50">Groups of Schools</span>
-              </div>
+            <div className="mb-4">
+              <img
+                src="/montessori Logo.png"
+                alt="Montessori Groups of Schools"
+                className="h-14 w-auto object-contain"
+              />
             </div>
             <p className="text-sm text-white/60 leading-relaxed mb-6">
               Nurturing excellence across Telangana for 33+ years. Building confident, capable individuals through quality education.

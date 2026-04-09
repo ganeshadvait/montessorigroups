@@ -60,7 +60,7 @@ export function TrustBadges() {
               }`}
               style={{ transitionDelay: `${index * 120}ms` }}
             >
-              <stat.icon className="text-primary mb-3 mx-auto w-8 h-8 md:w-10 md:h-10" strokeWidth={1.5} />
+              <stat.icon className="text-[#DD3E74] mb-3 mx-auto w-8 h-8 md:w-10 md:h-10" strokeWidth={1.5} />
               <h3 className="font-serif text-3xl md:text-4xl text-foreground mb-1 font-bold">{stat.value}</h3>
               <p className="text-xs md:text-sm text-muted-foreground">{stat.label}</p>
             </div>

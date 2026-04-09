@@ -143,7 +143,7 @@ export function HostelSection() {
               }`}
               style={{ transitionDelay: `${(index + 3) * 100}ms` }}
             >
-              <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-primary/10 mb-5 group-hover:bg-primary/20 boty-transition">
+              <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-secondary/10 mb-5 group-hover:bg-primary/20 boty-transition">
                 <feature.icon className="w-7 h-7 text-primary" />
               </div>
               <h3 className="font-serif text-xl text-foreground mb-2">{feature.title}</h3>
@@ -166,7 +166,7 @@ export function HostelSection() {
             { value: "100%", label: "Safe & Secure" },
           ].map((stat) => (
             <div key={stat.label} className="text-center p-6 rounded-2xl bg-primary/5">
-              <div className="text-3xl font-bold font-serif text-primary mb-1">{stat.value}</div>
+              <div className="text-3xl font-bold font-serif text-black mb-1">{stat.value}</div>
               <div className="text-sm text-muted-foreground">{stat.label}</div>
             </div>
           ))}

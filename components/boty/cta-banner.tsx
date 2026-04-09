@@ -37,11 +37,11 @@ export function CTABanner() {
             fill
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/80 to-primary/50" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/80 to-black/50" />
 
           <div className="relative z-10 max-w-xl">
             <span className="inline-flex items-center gap-2 rounded-full bg-secondary/90 px-4 py-2 mb-6 text-sm font-semibold text-secondary-foreground">
-              <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
+              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
               Admissions Closing Soon
             </span>
 

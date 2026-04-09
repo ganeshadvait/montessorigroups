@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { Menu, X, Phone, GraduationCap } from "lucide-react"
+import { Menu, X, Phone } from "lucide-react"
 
 export function Header() {
   const [open, setOpen] = useState(false)
@@ -17,14 +17,12 @@ export function Header() {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-background/95 backdrop-blur-md shadow-md border-b border-border/50" : "bg-transparent"}`}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-18">
-        <Link href="/" className="flex items-center gap-2">
-          <div className="w-9 h-9 rounded-full bg-primary flex items-center justify-center">
-            <GraduationCap className="w-5 h-5 text-primary-foreground" />
-          </div>
-          <div className="leading-tight">
-            <span className="font-serif font-bold text-lg block text-foreground">Montessori</span>
-            <span className="text-[10px] tracking-widest uppercase text-muted-foreground">Groups of Schools</span>
-          </div>
+        <Link href="/" className="flex items-center">
+          <img
+            src="/montessori Logo.png"
+            alt="Montessori Groups of Schools"
+            className="h-12 w-auto object-contain"
+          />
         </Link>
 
         <div className="hidden md:flex items-center gap-8 text-sm font-medium">

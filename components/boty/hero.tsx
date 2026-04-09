@@ -6,15 +6,16 @@ import { Phone, Calendar, CheckCircle } from "lucide-react"
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background image with slow zoom */}
+      {/* Background video */}
       <div className="absolute inset-0">
-        <img
-          src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1920&q=80"
-          alt="Students in a bright, nurturing classroom environment"
-          width={1920}
-          height={1080}
+        <video
+          src="/montessori school video.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
           className="w-full h-full object-cover"
-          style={{ animation: "slow-zoom 20s ease-out forwards" }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-foreground/85 via-foreground/60 to-foreground/20" />
       </div>
@@ -31,10 +32,10 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 rounded-full bg-secondary/90 px-4 py-2 mb-6"
+            className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-lg px-4 py-2 mb-6"
           >
-            <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
-            <span className="text-sm font-semibold text-secondary-foreground">
+            <span className="w-2 h-2 rounded-full bg-[#FCBA28] animate-pulse" />
+            <span className="text-sm font-semibold text-white">
               Admissions Open 2026–2027
             </span>
           </motion.div>
@@ -46,8 +47,8 @@ export function Hero() {
             className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
           >
             Where Every Child{" "}
-            <span className="text-secondary">Discovers</span> Their{" "}
-            <span className="text-secondary">True Potential</span>
+            <span className="text-primary">Discovers</span> Their{" "}
+            <span className="text-primary">True Potential</span>
           </motion.h1>
 
           <motion.p
@@ -87,7 +88,7 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.7 }}
-            className="flex flex-wrap items-center gap-x-6 gap-y-3 mt-8 text-white/70 text-sm"
+            className="flex flex-wrap items-center gap-x-6 gap-y-3 my-8 text-white/70 text-sm"
           >
             <span className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-secondary" />
