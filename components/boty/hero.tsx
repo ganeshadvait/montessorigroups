@@ -110,7 +110,7 @@ Empowering students to excel in life, both inside and outside the classroom.
             </span>
             <span className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-secondary" />
-              IIT Foundation
+              IIT & NEET
             </span>
             <span className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-secondary" />
