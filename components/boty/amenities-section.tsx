@@ -40,7 +40,7 @@ const amenities = [
   {
     icon: Dumbbell,
     title: "Sports Facilities",
-    description: "Cricket, volleyball, basketball courts, and indoor games — promoting fitness and team spirit.",
+    description: "Cricket, volleyball, basketball courts, and indoor games - promoting fitness and team spirit.",
     color: "bg-primary/10 text-primary",
   },
   {
@@ -137,11 +137,11 @@ export function AmenitiesSection() {
             className={`text-lg text-muted-foreground ${headerVisible ? "animate-blur-in opacity-0" : "opacity-0"}`}
             style={headerVisible ? { animationDelay: "0.6s", animationFillMode: "forwards" } : {}}
           >
-            From smart classrooms to sports grounds — everything your child needs for holistic development under one roof.
+            From smart classrooms to sports grounds - everything your child needs for holistic development under one roof.
           </p>
         </div>
 
-        {/* Amenities — Mobile: horizontal scroll, Desktop: grid */}
+        {/* Amenities - Mobile: horizontal scroll, Desktop: grid */}
         <div ref={gridRef}>
           {/* Mobile horizontal scroll */}
           <div className="sm:hidden -mx-6 px-6 overflow-x-auto scrollbar-hide">

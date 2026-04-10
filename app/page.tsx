@@ -1,3 +1,4 @@
+import { AdmissionPopup } from "@/components/boty/admission-popup"
 import { Header } from "@/components/boty/header"
 import { Hero } from "@/components/boty/hero"
 import { TrustBadges } from "@/components/boty/trust-badges"
@@ -9,8 +10,10 @@ import { HostelSection } from "@/components/boty/hostel-section"
 import { AmenitiesSection } from "@/components/boty/amenities-section"
 import { ProductGrid } from "@/components/boty/product-grid"
 import { DoctorsSection } from "@/components/boty/doctors-section"
-import { VideoTestimonials } from "@/components/boty/video-testimonials"
+import { Events } from "@/components/boty/events"
 import { Testimonials } from "@/components/boty/testimonials"
+import { TestimonialCarousel } from "@/components/boty/testimonial-carousel"
+import { VideoTestimonials } from "@/components/boty/video-testimonials"
 import { BookAppointment } from "@/components/boty/book-appointment"
 import { CTABanner } from "@/components/boty/cta-banner"
 import { Footer } from "@/components/boty/footer"
@@ -18,17 +21,20 @@ import { Footer } from "@/components/boty/footer"
 export default function HomePage() {
   return (
     <main>
+      {/* <AdmissionPopup /> */}
       <Header />
       <Hero />
       <TrustBadges />
       <CurriculumSection />
       <AboutSection />
-      <FeatureSection />
+      <Testimonials />
+      <VideoTestimonials />
       <DirectorSection />
       <HostelSection />
+      <FeatureSection />
       {/* <ProductGrid /> */}
-      {/* <VideoTestimonials /> */}
-      <Testimonials />
+      {/* <Events /> */}
+      <TestimonialCarousel />
       <DoctorsSection />      
       <BookAppointment />
       <CTABanner />

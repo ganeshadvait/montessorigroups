@@ -19,7 +19,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* Chirag — Healthcare Theme */
+/* Chirag - Healthcare Theme */
 :root {
   /* Brand Colors: Deep Purple Primary, Golden Secondary, with light/dark neutrals */
   --background: #FAFAF9; /* Off White */
@@ -231,4 +231,22 @@
   50% {
     box-shadow: 0 0 0 8px rgba(var(--accent), 0);
   }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes shrink-bar {
+  from { width: 100%; }
+  to { width: 0%; }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out forwards;
+}
+
+.animate-shrink-bar {
+  animation: shrink-bar 3s linear forwards;
 }

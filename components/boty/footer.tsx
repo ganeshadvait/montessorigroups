@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { Phone, Mail, MapPin, Instagram, Facebook, Youtube } from "lucide-react"
+import { Mail, MapPin, Instagram, Facebook, Youtube } from "lucide-react"
 
 const quickLinks = [
   { name: "Home", href: "/" },
@@ -107,11 +107,11 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <a href="tel:7700051010" className="md:hidden flex items-center gap-2 text-sm text-white/60 hover:text-white boty-transition">
-                  <Phone className="w-4 h-4 flex-shrink-0" />
+                  <img src="/Call white.svg" alt="Call" className="w-6 h-6 flex-shrink-0" />
                   +91 77000 51010
                 </a>
                 <a href="https://wa.me/917700051010?text=Hi%2C%20I%27m%20interested%20in%20admissions" target="_blank" rel="noopener noreferrer" className="hidden md:flex items-center gap-2 text-sm text-white/60 hover:text-white boty-transition">
-                  <Phone className="w-4 h-4 flex-shrink-0" />
+                  <img src="/Whatsapp white.svg" alt="WhatsApp" className="w-6 h-6 flex-shrink-0" />
                   +91 77000 51010
                 </a>
               </li>
@@ -131,14 +131,14 @@ export function Footer() {
             <p className="text-sm text-white/40">
               &copy; {new Date().getFullYear()} Montessori Groups of Schools, Telangana. All rights reserved.
             </p>
-            <div className="flex gap-6">
+            {/* <div className="flex gap-6">
               <Link href="/" className="text-sm text-white/40 hover:text-white/60 boty-transition">
                 Privacy Policy
               </Link>
               <Link href="/" className="text-sm text-white/40 hover:text-white/60 boty-transition">
                 Terms of Service
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

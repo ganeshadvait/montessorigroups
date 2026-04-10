@@ -2,7 +2,8 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { MapPin, Phone, Navigation, Mail, Clock } from "lucide-react"
+import { MapPin, Navigation, Mail, Clock } from "lucide-react"
+import Image from "next/image"
 
 const branch = {
   name: "Yellapur",
@@ -83,7 +84,7 @@ export function DoctorsSection() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          {/* Left — Google Map */}
+          {/* Left - Google Map */}
           <div className="relative h-[350px] lg:h-[500px] w-full">
             <iframe
               src={branch.mapEmbed}
@@ -97,7 +98,7 @@ export function DoctorsSection() {
             />
           </div>
 
-          {/* Right — Address & CTAs */}
+          {/* Right - Address & CTAs */}
           <div className="p-8 lg:p-12 flex flex-col justify-center">
             <div className="inline-flex items-center gap-2 mb-4">
               <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
@@ -170,16 +171,16 @@ export function DoctorsSection() {
                 href={`tel:${branch.phone}`}
                 className="md:hidden inline-flex items-center justify-center gap-2 bg-secondary text-secondary-foreground px-6 py-4 rounded-full text-sm font-medium tracking-wide boty-transition hover:brightness-110 flex-1"
               >
-                <Phone className="w-4 h-4" />
+                <Image src="/Call white.svg" alt="Call" width={24} height={24} className="w-6 h-6" />
                 Call Now
               </a>
               <a
                 href={`https://wa.me/91${branch.phone}?text=Hi%2C%20I%27m%20interested%20in%20admissions`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hidden md:inline-flex items-center justify-center gap-2 bg-secondary text-secondary-foreground px-6 py-4 rounded-full text-sm font-medium tracking-wide boty-transition hover:brightness-110 flex-1"
+                className="hidden md:inline-flex items-center justify-center gap-2 bg-green-600 text-secondary-foreground px-6 py-4 rounded-full text-sm font-medium tracking-wide boty-transition hover:brightness-110 flex-1"
               >
-                <Phone className="w-4 h-4" />
+                <Image src="/Whatsapp white.svg" alt="WhatsApp" width={24} height={24} className="w-6 h-6" />
                 WhatsApp Us
               </a>
             </div>

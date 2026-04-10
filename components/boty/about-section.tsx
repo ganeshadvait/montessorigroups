@@ -28,7 +28,7 @@ export function AboutSection() {
           ref={sectionRef}
           className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center"
         >
-          {/* Left — Image */}
+          {/* Left - Image */}
           <div
             className={`relative transition-all duration-700 ease-out ${
               isVisible
@@ -41,7 +41,7 @@ export function AboutSection() {
               <div className="absolute inset-0 rounded-3xl overflow-hidden boty-shadow">
                 <Image
                   src="/school image.svg"
-                  alt="Sri. Jose Nedumthundam — Founder & Chairman"
+                  alt="Sri. Jose Nedumthundam - Founder & Chairman"
                   fill
                   className="object-cover"
                 />
@@ -69,7 +69,7 @@ export function AboutSection() {
             </div>
           </div>
 
-          {/* Right — Content */}
+          {/* Right - Content */}
           <div
             className={`transition-all duration-700 ease-out ${
               isVisible
@@ -151,19 +151,19 @@ export function AboutSection() {
             >
               <a
                 href="tel:7700051010"
-                className="md:hidden inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-full text-sm font-medium tracking-wide boty-transition hover:bg-primary/90"
+                className="md:hidden inline-flex items-center justify-center gap-2 bg-primary text-white px-8 py-4 rounded-full text-sm font-medium tracking-wide boty-transition hover:bg-primary/90"
               >
+                <img src="/Call white.svg" alt="Call" className="w-6 h-6" />
                 Call Now
-                <ArrowRight className="w-4 h-4" />
               </a>
               <a
                 href="https://wa.me/917700051010?text=Hi%2C%20I%27m%20interested%20in%20admissions"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hidden md:inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-full text-sm font-medium tracking-wide boty-transition hover:bg-primary/90"
+                className="hidden md:inline-flex items-center justify-center gap-2 bg-green-600 text-white px-8 py-4 rounded-full text-sm font-medium tracking-wide boty-transition hover:bg-green-700"
               >
+                <img src="/Whatsapp white.svg" alt="WhatsApp" className="w-6 h-6" />
                 WhatsApp Us
-                <ArrowRight className="w-4 h-4" />
               </a>
             </div>
           </div>

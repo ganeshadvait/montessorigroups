@@ -1,11 +1,11 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Phone, Calendar, CheckCircle } from "lucide-react"
+import { Calendar, CheckCircle } from "lucide-react"
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center overflow-hidden pt-8 md:pt-16">
       {/* Background video */}
       <div className="absolute inset-0">
         <video
@@ -74,13 +74,13 @@ Empowering students to excel in life, both inside and outside the classroom.
               style={{ animation: "pulse-gentle 3s ease-in-out infinite" }}
             >
               <Calendar className="w-5 h-5" />
-              Apply Now — Limited Seats
+              Apply Now - Limited Seats
             </a>
             <a
               href="tel:7700051010"
               className="md:hidden inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/30 px-8 py-4 text-white font-semibold text-lg hover:bg-white/10 boty-transition"
             >
-              <Phone className="w-5 h-5" />
+              <img src="/Call white.svg" alt="Call" className="w-6 h-6" />
               Call Now
             </a>
             <a
@@ -89,7 +89,7 @@ Empowering students to excel in life, both inside and outside the classroom.
               rel="noopener noreferrer"
               className="hidden md:inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/30 px-8 py-4 text-white font-semibold text-lg hover:bg-white/10 boty-transition"
             >
-              <Phone className="w-5 h-5" />
+              <img src="/Whatsapp white.svg" alt="WhatsApp" className="w-6 h-6" />
               WhatsApp Us
             </a>
           </motion.div>

@@ -10,7 +10,7 @@ const stats = [
   },
   {
     image: "/years of excellence.png",
-    value: "30+",
+    value: "50+",
     label: "Experienced Faculty",
   },
   {
@@ -20,7 +20,7 @@ const stats = [
   },
   {
     image: "/CLASS.svg",
-    value: "KG - XII",
+    value: "KG - X",
     label: "Classes Offered",
   },
 ]
