@@ -74,7 +74,7 @@ Empowering students to excel in life, both inside and outside the classroom.
               style={{ animation: "pulse-gentle 3s ease-in-out infinite" }}
             >
               <Calendar className="w-5 h-5" />
-              Apply Now - Limited Seats
+              Book A Campus Tour
             </a>
             <a
               href="tel:7700051010"
