@@ -66,7 +66,7 @@ export function VideoTestimonials() {
   }
 
   return (
-    <section className="relative py-20 px-5 overflow-hidden bg-gradient-to-br from-[#20A1A6] via-[#178085] to-[#0f6063] text-center">
+    <section id="testimonials" className="relative py-20 px-5 overflow-hidden bg-gradient-to-br from-[#20A1A6] via-[#178085] to-[#0f6063] text-center">
       {/* Glassy highlight orbs */}
       <div className="pointer-events-none absolute -top-32 -left-32 w-96 h-96 rounded-full bg-white/15 blur-3xl" />
       <div className="pointer-events-none absolute top-1/3 left-1/2 -translate-x-1/2 w-[500px] h-[500px] rounded-full bg-[#27BDBB]/25 blur-3xl" />

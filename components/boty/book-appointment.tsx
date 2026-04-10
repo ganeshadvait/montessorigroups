@@ -219,7 +219,7 @@ export function BookAppointment() {
                     <label className="block text-sm font-medium text-foreground mb-2">Phone Number *</label>
                     <input
                       type="tel"
-                      placeholder="+91 98765 43210"
+                      placeholder="+91 9999 99999"
                       value={formData.phone}
                       onChange={(e) => { setFormData({ ...formData, phone: e.target.value }); setFieldErrors({ ...fieldErrors, phone: "" }) }}
                       className={`w-full px-4 py-3 rounded-xl border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition ${fieldErrors.phone ? "border-red-500" : "border-border"}`}

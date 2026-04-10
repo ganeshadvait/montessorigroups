@@ -31,8 +31,8 @@ export function Header() {
         </Link>
 
         <div className="hidden lg:flex items-center gap-6 xl:gap-8 text-sm font-medium">
-          <a href="#why-us" className={`boty-transition ${scrolled ? "text-foreground/70 hover:text-secondary" : "text-black/80 hover:text-secondary"}`}>Why Us</a>
-          <a href="#founder" className={`boty-transition ${scrolled ? "text-foreground/70 hover:text-secondary" : "text-black/80 hover:text-secondary"}`}>Our Founder</a>
+          <a href="#academic" className={`boty-transition ${scrolled ? "text-foreground/70 hover:text-secondary" : "text-black/80 hover:text-secondary"}`}>Academic Programmes</a>
+          <a href="#about" className={`boty-transition ${scrolled ? "text-foreground/70 hover:text-secondary" : "text-black/80 hover:text-secondary"}`}>About</a>
           <a href="#testimonials" className={`boty-transition ${scrolled ? "text-foreground/70 hover:text-secondary" : "text-black/80 hover:text-secondary"}`}>Testimonials</a>
           <a href="#branches" className={`boty-transition ${scrolled ? "text-foreground/70 hover:text-secondary" : "text-black/80 hover:text-secondary"}`}>Location</a>
           <div className="flex items-center gap-3">

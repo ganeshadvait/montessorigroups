@@ -5,10 +5,10 @@ import { Mail, MapPin, Instagram, Facebook, Youtube } from "lucide-react"
 
 const quickLinks = [
   { name: "Home", href: "/" },
-  { name: "About Us", href: "#founder" },
-  { name: "Admissions", href: "#enquiry" },
-  { name: "Branches", href: "#branches" },
+  { name: "Academic Programmes", href: "#academic" },
+  { name: "About", href: "#about" },
   { name: "Testimonials", href: "#testimonials" },
+  { name: "Location", href: "#branches" },
 ]
 
 const academicLinks = [
@@ -34,7 +34,7 @@ export function Footer() {
           <div className="col-span-2 md:col-span-1">
             <div className="mb-4">
               <img
-                src="/School Logo_MPS.png"
+                src="/montessori footer logo website.png"
                 alt="Montessori Groups of Schools"
                 className="h-14 w-auto object-contain"
               />
@@ -85,7 +85,7 @@ export function Footer() {
           </div>
 
           {/* Academics */}
-          <div>
+          {/* <div>
             <h3 className="font-medium text-white mb-4">Academics</h3>
             <ul className="space-y-3">
               {academicLinks.map((link) => (
@@ -99,7 +99,7 @@ export function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
 
           {/* Contact */}
           <div>
@@ -111,7 +111,7 @@ export function Footer() {
                   +91 77000 51010
                 </a>
                 <a href="https://wa.me/917700051010?text=Hi%2C%20I%27m%20interested%20in%20admissions" target="_blank" rel="noopener noreferrer" className="hidden md:flex items-center gap-2 text-sm text-white/60 hover:text-white boty-transition">
-                  <img src="/Whatsapp white.svg" alt="WhatsApp" className="w-6 h-6 flex-shrink-0" />
+                  <img src="/Whatsapp white.svg" alt="WhatsApp" className="w-4 h-4 flex-shrink-0" />
                   +91 77000 51010
                 </a>
               </li>

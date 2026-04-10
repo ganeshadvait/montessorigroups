@@ -72,7 +72,7 @@ export function CurriculumSection() {
   }, [])
 
   return (
-    <section id="curriculum" className="py-12 md:py-24 bg-background scroll-mt-20 overflow-hidden">
+    <section id="academic" className="py-12 md:py-24 bg-background scroll-mt-20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <div ref={headerRef} className="text-center mb-20 max-w-2xl mx-auto">
