@@ -74,7 +74,7 @@ export function VideoTestimonials() {
       {/* Subtle glass sheen overlay */}
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-transparent via-white/5 to-white/10" />
       <span className="relative text-sm tracking-[0.3em] uppercase text-primary mb-4 block">
-        Video Testimonials
+        Happy Parents
       </span>
       <h2 className="font-serif text-3xl md:text-5xl font-bold text-white mb-3 leading-tight">
         Hear From Our Families
@@ -113,10 +113,10 @@ export function VideoTestimonials() {
                 <Play className="w-7 h-7 fill-white text-white ml-1" />
               </button>
               {/* Name overlay */}
-              <div className="absolute bottom-0 left-0 right-0 p-4 text-left">
+              {/* <div className="absolute bottom-0 left-0 right-0 p-4 text-left">
                 <p className="text-white font-semibold text-sm md:text-base">{v.name}</p>
                 <p className="text-white/70 text-xs md:text-sm">{v.role}</p>
-              </div>
+              </div> */}
             </div>
           )
         })}
