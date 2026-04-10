@@ -1,60 +1,41 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { Play, X, ArrowLeft, ArrowRight } from "lucide-react"
 
 type VideoTestimonial = {
   id: number
-  thumbnail: string
+  name: string
+  role: string
   videoUrl: string
 }
 
 const videos: VideoTestimonial[] = [
-  {
-    id: 1,
-    thumbnail:
-      "https://images.unsplash.com/photo-1544717297-fa95b6ee9643?w=600&h=800&fit=crop",
-    videoUrl: "/Patent Testimonials MPS 1.webp",
-  },
-  {
-    id: 2,
-    thumbnail:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=800&fit=crop",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-  },
-  {
-    id: 3,
-    thumbnail:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=800&fit=crop",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-  },
-  {
-    id: 4,
-    thumbnail:
-      "https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=600&h=800&fit=crop",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-  },
-  {
-    id: 5,
-    thumbnail:
-      "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&h=800&fit=crop",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-  },
-  {
-    id: 6,
-    thumbnail:
-      "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=600&h=800&fit=crop",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-  },
+  { id: 1, name: "Lakshmi Devi R.", role: "Parent, Class 8", videoUrl: "/testimonial 1.webm" },
+  { id: 2, name: "Ramesh Kumar P.", role: "Parent, Class 10", videoUrl: "/testimonial 2.webm" },
+  { id: 3, name: "Sunita Reddy M.", role: "Parent, Class 5", videoUrl: "/testimonial 3.webm" },
+  { id: 4, name: "Venkat Rao K.", role: "Parent, Class 12", videoUrl: "/testimonial 4..mp4" },
 ]
 
 export function VideoTestimonials() {
   const [current, setCurrent] = useState(0)
   const [playing, setPlaying] = useState<string | null>(null)
 
+  const touchStartX = useRef(0)
+
   const total = videos.length
   const next = () => setCurrent((c) => (c + 1) % total)
   const prev = () => setCurrent((c) => (c - 1 + total) % total)
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX
+  }
+  const onTouchEnd = (e: React.TouchEvent) => {
+    const diff = touchStartX.current - e.changedTouches[0].clientX
+    if (Math.abs(diff) > 50) {
+      diff > 0 ? next() : prev()
+    }
+  }
 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
@@ -93,39 +74,37 @@ export function VideoTestimonials() {
       {/* Subtle glass sheen overlay */}
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-transparent via-white/5 to-white/10" />
       <span className="relative text-sm tracking-[0.3em] uppercase text-primary mb-4 block">
-        Video Stories
+        Video Testimonials
       </span>
       <h2 className="font-serif text-3xl md:text-5xl font-bold text-white mb-3 leading-tight">
-        Voices of Our Families
+        Hear From Our Families
       </h2>
       <p className="text-white/75 max-w-xl mx-auto mb-12">
-        Real stories from parents and students — hear their experiences first-hand.
+        Real stories from parents and students - hear their experiences first-hand.
       </p>
 
-      <div className="relative h-[560px] max-w-6xl mx-auto flex items-center justify-center">
-        {/* Prev arrow */}
-        <button
-          onClick={prev}
-          aria-label="Previous"
-          className="absolute left-1 md:left-0 top-1/2 -translate-y-1/2 z-40 w-11 h-11 rounded-full bg-white text-primary shadow-lg flex items-center justify-center hover:bg-secondary hover:text-[#2a1a4a] transition-all"
-        >
-          <ArrowLeft className="w-5 h-5" />
-        </button>
-
+      <div
+        className="relative h-[420px] sm:h-[460px] md:h-[500px] lg:h-[560px] max-w-6xl mx-auto flex items-center justify-center"
+        onTouchStart={onTouchStart}
+        onTouchEnd={onTouchEnd}
+      >
         {/* Cards */}
         {videos.map((v, index) => {
           const pos = getPosition(index)
           return (
             <div
               key={v.id}
-              className={`absolute w-[85%] md:w-80 aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl transition-all duration-500 ease-out ${positionClasses[pos]}`}
+              className={`absolute w-[75%] md:w-80 aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl transition-all duration-500 ease-out bg-black ${positionClasses[pos]}`}
             >
-              <img
-                src={v.thumbnail}
-                alt="Video testimonial"
+              <video
+                src={v.videoUrl}
                 className="w-full h-full object-cover"
+                muted
+                loop
+                autoPlay
+                playsInline
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
               <button
                 onClick={() => pos === "active" && setPlaying(v.videoUrl)}
                 aria-label="Play video"
@@ -133,32 +112,46 @@ export function VideoTestimonials() {
               >
                 <Play className="w-7 h-7 fill-white text-white ml-1" />
               </button>
+              {/* Name overlay */}
+              <div className="absolute bottom-0 left-0 right-0 p-4 text-left">
+                <p className="text-white font-semibold text-sm md:text-base">{v.name}</p>
+                <p className="text-white/70 text-xs md:text-sm">{v.role}</p>
+              </div>
             </div>
           )
         })}
+      </div>
 
-        {/* Next arrow */}
+      {/* Navigation */}
+      <div className="mt-8 flex items-center justify-between max-w-6xl mx-auto">
+        <button
+          onClick={prev}
+          aria-label="Previous"
+          className="w-11 h-11 rounded-full bg-white text-primary shadow-lg flex items-center justify-center hover:bg-secondary hover:text-[#2a1a4a] transition-all"
+        >
+          <ArrowLeft className="w-5 h-5" />
+        </button>
+
+        <div className="flex gap-2">
+          {videos.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrent(i)}
+              aria-label={`Go to video ${i + 1}`}
+              className={`w-2.5 h-2.5 rounded-full transition-all ${
+                i === current ? "bg-white scale-[1.4]" : "bg-white/40"
+              }`}
+            />
+          ))}
+        </div>
+
         <button
           onClick={next}
           aria-label="Next"
-          className="absolute right-1 md:right-0 top-1/2 -translate-y-1/2 z-40 w-11 h-11 rounded-full bg-white text-primary shadow-lg flex items-center justify-center hover:bg-secondary hover:text-[#2a1a4a] transition-all"
+          className="w-11 h-11 rounded-full bg-white text-primary shadow-lg flex items-center justify-center hover:bg-secondary hover:text-[#2a1a4a] transition-all"
         >
           <ArrowRight className="w-5 h-5" />
         </button>
-      </div>
-
-      {/* Dots */}
-      <div className="mt-8 flex justify-center gap-2">
-        {videos.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setCurrent(i)}
-            aria-label={`Go to video ${i + 1}`}
-            className={`w-2.5 h-2.5 rounded-full transition-all ${
-              i === current ? "bg-secondary scale-[1.4]" : "bg-white/40"
-            }`}
-          />
-        ))}
       </div>
 
       {/* Video Modal */}
@@ -168,7 +161,7 @@ export function VideoTestimonials() {
           onClick={() => setPlaying(null)}
         >
           <div
-            className="relative w-full max-w-4xl aspect-video bg-black rounded-2xl overflow-hidden"
+            className="relative w-full max-w-sm aspect-[3/4] bg-black rounded-2xl overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
             <button
@@ -178,12 +171,11 @@ export function VideoTestimonials() {
             >
               <X className="w-5 h-5" />
             </button>
-            <iframe
-              src={`${playing}?autoplay=1`}
-              title="Video testimonial"
-              className="w-full h-full border-0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
+            <video
+              src={playing}
+              className="w-full h-full"
+              controls
+              autoPlay
             />
           </div>
         </div>

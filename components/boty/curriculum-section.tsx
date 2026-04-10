@@ -92,7 +92,7 @@ export function CurriculumSection() {
             className={`text-lg text-muted-foreground ${headerVisible ? "animate-blur-in opacity-0" : "opacity-0"}`}
             style={headerVisible ? { animationDelay: "0.6s", animationFillMode: "forwards" } : {}}
           >
-            From early discovery to academic mastery — a thoughtful curriculum that grows with your child.
+            From early discovery to academic mastery - a thoughtful curriculum that grows with your child.
           </p>
         </div>
 

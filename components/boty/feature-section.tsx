@@ -55,7 +55,7 @@ const features = [
   {
     title: "Sports Facilities",
     image: "/Sports Facilities.png",
-    description: "Cricket, volleyball, basketball courts, and indoor games — promoting fitness and team spirit.",
+    description: "Cricket, volleyball, basketball courts, and indoor games - promoting fitness and team spirit.",
     color: "bg-primary/10 text-primary",
   },
   {
@@ -160,7 +160,7 @@ export function FeatureSection() {
           </p>
         </div>
 
-        {/* Feature — Mobile: horizontal scroll, Desktop: grid */}
+        {/* Feature - Mobile: horizontal scroll, Desktop: grid */}
         <div ref={gridRef}>
           {/* Mobile horizontal scroll */}
           <div className="sm:hidden -mx-6 px-6 overflow-x-auto scrollbar-hide">
@@ -204,7 +204,7 @@ export function FeatureSection() {
             ))}
           </div>
 
-          {/* View More / View Less button — desktop only */}
+          {/* View More / View Less button - desktop only */}
           {features.length > INITIAL_COUNT && (
             <div className="hidden sm:flex justify-center mt-10">
               <button

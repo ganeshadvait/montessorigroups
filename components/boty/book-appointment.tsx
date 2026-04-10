@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
-import { ArrowRight, CheckCircle, Phone, MessageCircle } from "lucide-react"
+import { ArrowRight, CheckCircle } from "lucide-react"
 
 const branches = [
   "Yellandu", "Bhupalpally", "Bhongir", "Bibinagar", "Huzurabad",
@@ -99,7 +99,7 @@ export function BookAppointment() {
           ref={sectionRef}
           className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center"
         >
-          {/* Left — Image + Trust */}
+          {/* Left - Image + Trust */}
           <div
             className={`transition-all duration-700 ease-out ${
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
@@ -153,13 +153,13 @@ export function BookAppointment() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-green-600 text-white px-5 py-3 rounded-full text-sm font-medium boty-transition hover:bg-green-700"
               >
-                <MessageCircle className="w-4 h-4" />
+                <img src="/Whatsapp white.svg" alt="WhatsApp" className="w-6 h-6" />
                 WhatsApp Us
               </a>
             </div>
           </div>
 
-          {/* Right — Form */}
+          {/* Right - Form */}
           <div
             className={`transition-all duration-700 ease-out ${
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
@@ -277,7 +277,7 @@ export function BookAppointment() {
                   disabled={submitting}
                   className="w-full flex items-center justify-center gap-3 bg-secondary text-secondary-foreground py-4 rounded-full font-semibold tracking-wide boty-transition hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 mt-2 text-lg shadow-lg disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  {submitting ? "Submitting..." : "Submit Details  — Get Callback"}
+                  {submitting ? "Submitting..." : "Submit Details  - Get Callback"}
                   {!submitting && <ArrowRight className="w-5 h-5" />}
                 </button>
 

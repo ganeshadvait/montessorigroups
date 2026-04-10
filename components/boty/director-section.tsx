@@ -28,7 +28,7 @@ export function DirectorSection() {
           ref={sectionRef}
           className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center"
         >
-          {/* Left — Content */}
+          {/* Left - Content */}
           <div
             className={`order-2 lg:order-1 transition-all duration-700 ease-out ${
               isVisible
@@ -73,7 +73,7 @@ export function DirectorSection() {
                   : {}
               }
             >
-              M.A. (Pol), M.A. (Pub. Adm), M.Ed. — Founder & Chairman
+              M.A. (Pol), M.A. (Pub. Adm), M.Ed. - Founder & Chairman
             </p>
 
             <p
@@ -150,7 +150,7 @@ export function DirectorSection() {
             ></div>
           </div>
 
-          {/* Right — Image */}
+          {/* Right - Image */}
           <div
             className={`order-1 lg:order-2 relative transition-all duration-700 ease-out ${
               isVisible
@@ -163,7 +163,7 @@ export function DirectorSection() {
               <div className="absolute inset-0 rounded-3xl overflow-hidden boty-shadow">
                 <Image
                   src="/Founder image.svg"
-                  alt="Sri. Jose Nedumthundam — Founder & Chairman"
+                  alt="Sri. Jose Nedumthundam - Founder & Chairman"
                   fill
                   className="object-cover"
                 />

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
-import { Phone, Calendar, ArrowRight } from "lucide-react"
+import { Calendar, ArrowRight } from "lucide-react"
 
 export function CTABanner() {
   const [isVisible, setIsVisible] = useState(false)
@@ -46,7 +46,7 @@ export function CTABanner() {
             </span>
 
             <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl text-white mb-4 leading-tight">
-              Don't Wait — Give Your Child the Best Start
+              Don't Wait - Give Your Child the Best Start
             </h3>
 
             <p className="text-white/80 text-lg mb-8">
@@ -66,7 +66,7 @@ export function CTABanner() {
                 href="tel:7700051010"
                 className="md:hidden inline-flex items-center justify-center gap-2 border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 boty-transition"
               >
-                <Phone className="w-5 h-5" />
+                <img src="/Call white.svg" alt="Call" className="w-6 h-6" />
                 Call: +91 77000 51010
               </a>
               <a
@@ -75,7 +75,7 @@ export function CTABanner() {
                 rel="noopener noreferrer"
                 className="hidden md:inline-flex items-center justify-center gap-2 border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 boty-transition"
               >
-                <Phone className="w-5 h-5" />
+                <img src="/Whatsapp white.svg" alt="WhatsApp" className="w-6 h-6" />
                 WhatsApp: +91 77000 51010
               </a>
             </div>

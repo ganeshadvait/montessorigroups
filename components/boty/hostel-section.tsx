@@ -12,7 +12,7 @@ const hostelFeatures = [
   {
     image: "/Nutritious Meals.png",
     title: "Nutritious Meals",
-    description: "Hygienic kitchen serving balanced vegetarian & non-vegetarian meals — breakfast, lunch, snacks & dinner.",
+    description: "Hygienic kitchen serving balanced vegetarian & non-vegetarian meals - breakfast, lunch, snacks & dinner.",
     color: "bg-secondary/20 text-secondary-foreground",
   },
   {
@@ -53,7 +53,7 @@ const hostelImages = [
     label: "Spacious Dining Hall",
   },
   {
-    src: "/recreation room.svg",
+    src: "/recreation room.png",
     alt: "Students studying in common room",
     label: "Study & Recreation Area",
   },
@@ -109,7 +109,7 @@ export function HostelSection() {
             className={`text-lg text-muted-foreground ${headerVisible ? "animate-blur-in opacity-0" : "opacity-0"}`}
             style={headerVisible ? { animationDelay: "0.6s", animationFillMode: "forwards" } : {}}
           >
-            Separate boys & girls hostels with modern amenities, nutritious food, and 24/7 care — so parents can rest easy.
+            Separate boys & girls hostels with modern amenities, nutritious food, and 24/7 care - so parents can rest easy.
           </p>
         </div>
 
