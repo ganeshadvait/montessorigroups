@@ -69,12 +69,12 @@ export function Header() {
 
       {open && (
         <div className="lg:hidden bg-background border-t border-border px-4 sm:px-6 py-4 space-y-1 shadow-lg">
-          <a href="#why-us" className="block py-3 text-foreground hover:text-primary boty-transition" onClick={() => setOpen(false)}>Why Us</a>
-          <a href="#founder" className="block py-3 text-foreground hover:text-primary boty-transition" onClick={() => setOpen(false)}>Our Founder</a>
-          <a href="#branches" className="block py-3 text-foreground hover:text-primary boty-transition" onClick={() => setOpen(false)}>Branches</a>
+          <a href="#academic" className="block py-3 text-foreground hover:text-primary boty-transition" onClick={() => setOpen(false)}>Academic Programmes</a>
+          <a href="#about" className="block py-3 text-foreground hover:text-primary boty-transition" onClick={() => setOpen(false)}>About</a>
           <a href="#testimonials" className="block py-3 text-foreground hover:text-primary boty-transition" onClick={() => setOpen(false)}>Testimonials</a>
-          <a href="tel:7700051010" className="flex items-center gap-2 py-3 text-primary font-semibold" onClick={() => setOpen(false)}>
-            <img src="/Call green.svg" alt="Call" className="w-6 h-6" />
+          <a href="#branches" className="block py-3 text-foreground hover:text-primary boty-transition" onClick={() => setOpen(false)}>Location</a>
+          <a href="tel:7700051010" className="flex items-center justify-center gap-2 py-3 mt-2 rounded-full bg-white border border-secondary text-secondary font-semibold" onClick={() => setOpen(false)}>
+            <img src="/Call green.svg" alt="Call" className="w-5 h-5" />
             Call Us
           </a>
           <a
