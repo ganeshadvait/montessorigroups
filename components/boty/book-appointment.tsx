@@ -277,7 +277,7 @@ export function BookAppointment() {
                   disabled={submitting}
                   className="w-full flex items-center justify-center gap-3 bg-secondary text-secondary-foreground py-4 rounded-full font-semibold tracking-wide boty-transition hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 mt-2 text-lg shadow-lg disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  {submitting ? "Submitting..." : "Submit Details  - Get Callback"}
+                  {submitting ? "Submitting..." : "Enquire Now"}
                   {!submitting && <ArrowRight className="w-5 h-5" />}
                 </button>
 
