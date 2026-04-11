@@ -59,7 +59,7 @@ export function CTABanner() {
                 className="inline-flex items-center justify-center gap-2 bg-secondary text-secondary-foreground px-8 py-4 rounded-full font-semibold text-lg hover:brightness-110 boty-transition shadow-lg"
               >
                 <Calendar className="w-5 h-5" />
-                Apply Now
+                Get Admission Details
                 <ArrowRight className="w-5 h-5" />
               </a>
               <a
