@@ -76,7 +76,7 @@ export function CTABanner() {
                 className="hidden md:inline-flex items-center justify-center gap-2 border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 boty-transition"
               >
                 <img src="/Whatsapp white.svg" alt="WhatsApp" className="w-6 h-6" />
-                WhatsApp: +91 77000 51010
+                WhatsApp Us
               </a>
             </div>
           </div>
