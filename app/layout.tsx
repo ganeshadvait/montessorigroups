@@ -2,6 +2,7 @@ import React from "react"
 import type { Metadata, Viewport } from 'next'
 import Script from 'next/script'
 import { Analytics } from '@vercel/analytics/react'
+import FloatingCTA from '@/components/boty/floating-cta'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -49,6 +50,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           />
         </noscript>
         {children}
+        <FloatingCTA />
         <Analytics />
       </body>
     </html>
