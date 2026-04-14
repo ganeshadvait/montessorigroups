@@ -59,7 +59,7 @@ export function CTABanner() {
                 className="inline-flex items-center justify-center gap-2 bg-secondary text-secondary-foreground px-8 py-4 rounded-full font-semibold text-lg hover:brightness-110 boty-transition shadow-lg"
               >
                 <Calendar className="w-5 h-5" />
-                Apply Now
+                Get Admission Details
                 <ArrowRight className="w-5 h-5" />
               </a>
               <a
@@ -67,7 +67,7 @@ export function CTABanner() {
                 className="md:hidden inline-flex items-center justify-center gap-2 border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 boty-transition"
               >
                 <img src="/Call white.svg" alt="Call" className="w-6 h-6" />
-                Call: +91 77000 51010
+                Call Us
               </a>
               <a
                 href="https://wa.me/917700051010?text=Hi%2C%20I%27m%20interested%20in%20admissions"
@@ -76,7 +76,7 @@ export function CTABanner() {
                 className="hidden md:inline-flex items-center justify-center gap-2 border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 boty-transition"
               >
                 <img src="/Whatsapp white.svg" alt="WhatsApp" className="w-6 h-6" />
-                WhatsApp: +91 77000 51010
+                WhatsApp Us
               </a>
             </div>
           </div>

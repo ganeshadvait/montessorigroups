@@ -34,7 +34,7 @@ export function Header() {
           <a href="#academic" className={`boty-transition ${scrolled ? "text-foreground/70 hover:text-secondary" : "text-black/80 hover:text-secondary"}`}>Academic Programmes</a>
           <a href="#about" className={`boty-transition ${scrolled ? "text-foreground/70 hover:text-secondary" : "text-black/80 hover:text-secondary"}`}>About</a>
           <a href="#testimonials" className={`boty-transition ${scrolled ? "text-foreground/70 hover:text-secondary" : "text-black/80 hover:text-secondary"}`}>Testimonials</a>
-          <a href="#branches" className={`boty-transition ${scrolled ? "text-foreground/70 hover:text-secondary" : "text-black/80 hover:text-secondary"}`}>Location</a>
+          <a href="#location" className={`boty-transition ${scrolled ? "text-foreground/70 hover:text-secondary" : "text-black/80 hover:text-secondary"}`}>Location</a>
           <div className="flex items-center gap-3">
             <a
               href="https://wa.me/917700051010?text=Hi%2C%20I%27m%20interested%20in%20admissions"

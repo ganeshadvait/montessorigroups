@@ -47,7 +47,7 @@ export function DoctorsSection() {
   }, [])
 
   return (
-    <section id="branches" className="py-12 md:py-24 bg-background scroll-mt-20">
+    <section id="location" className="py-12 md:py-24 bg-background scroll-mt-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <div ref={headerRef} className="text-center mb-16 max-w-2xl mx-auto">

@@ -46,7 +46,7 @@ export function Testimonials() {
   }, [])
 
   return (
-    <section id="testimonials" className="py-12 md:py-24 bg-background overflow-hidden scroll-mt-20">
+    <section className="py-12 md:py-24 bg-background overflow-hidden scroll-mt-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <div ref={headerRef} className="text-center mb-16">
