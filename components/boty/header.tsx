@@ -49,22 +49,27 @@ export function Header() {
               href="#enquiry"
               className="inline-flex items-center gap-2 rounded-full bg-secondary px-5 py-2 xl:px-6 xl:py-2.5 text-secondary-foreground font-semibold hover:brightness-110 boty-transition shadow-lg"
             >
-              Apply Now
+              Get Admissions 
             </a>
           </div>
         </div>
 
-        <button
-          onClick={() => setOpen(!open)}
-          className="lg:hidden p-2"
-          aria-label="Toggle menu"
-        >
+        <div className="flex lg:hidden items-center gap-2">
+          <a href="tel:7700051010" aria-label="Call us" className="p-2 animate-[ring_1.5s_ease-in-out_infinite]">
+            <img src="/Call green.svg" alt="Call" className="w-5 h-5" />
+          </a>
+          <button
+            onClick={() => setOpen(!open)}
+            className="p-2"
+            aria-label="Toggle menu"
+          >
           {open ? (
             <X className={`w-6 h-6 ${scrolled ? "text-foreground" : "text-black"}`} />
           ) : (
             <Menu className={`w-6 h-6 ${scrolled ? "text-foreground" : "text-black"}`} />
           )}
         </button>
+        </div>
       </div>
 
       {open && (
@@ -87,7 +92,7 @@ export function Header() {
             <img src="/Whatsapp white.svg" alt="WhatsApp" className="w-6 h-6" />
             WhatsApp Us
           </a>
-          <a href="#enquiry" className="block text-center py-3 mt-2 rounded-full bg-secondary text-secondary-foreground font-semibold" onClick={() => setOpen(false)}>Apply Now</a>
+          <a href="#enquiry" className="block text-center py-3 mt-2 rounded-full bg-secondary text-secondary-foreground font-semibold" onClick={() => setOpen(false)}>Enroll Now</a>
         </div>
       )}
     </nav>

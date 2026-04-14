@@ -102,7 +102,7 @@ export function Footer() {
           </div> */}
 
           {/* Contact */}
-          <div>
+          <div className="col-span-2 md:col-span-1">
             <h3 className="font-medium text-white mb-4">Contact</h3>
             <ul className="space-y-3">
               <li>
@@ -118,7 +118,7 @@ export function Footer() {
               <li>
                 <a href="mailto:admissions@montessorigroups.edu" className="flex items-center gap-2 text-sm text-white/60 hover:text-white boty-transition">
                   <Mail className="w-4 h-4 flex-shrink-0" />
-                  admissions@montessori.edu
+                  info@montessorijnprime.com
                 </a>
               </li>
             </ul>

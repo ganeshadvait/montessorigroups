@@ -89,7 +89,7 @@ export default function FloatingCTA() {
       </div>
 
       {/* Mobile: Fixed bottom bar */}
-      <div className="flex md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#25D366] border-t border-gray-200 shadow-[0_-4px_12px_rgba(0,0,0,0.1)]">
+      <div className="flex md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#25D366] border-t border-gray-200 shadow-[0_-4px_12px_rgba(0,0,0,0.1)] rounded-t-xl overflow-hidden">
         <a
           href={WHATSAPP_URL}
           target="_blank"
