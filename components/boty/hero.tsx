@@ -26,7 +26,7 @@ export function Hero() {
       <div className="absolute top-40 left-[60%] w-16 h-16 rounded-full bg-primary/20 floating-slow hidden lg:block" />
 
       {/* Content */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 py-20 w-full">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 py-20 w-full flex items-end md:items-center min-h-[inherit]">
         <div className="max-w-2xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -44,7 +44,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
+            className="font-serif text-2xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
           >
             Where Every Child{" "}
             <span className="text-primary">Discovers</span> Their{" "}
@@ -55,7 +55,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-lg md:text-xl text-white/80 mb-8 max-w-xl"
+            className="hidden md:block text-lg md:text-xl text-white/80 mb-8 max-w-xl"
           >
             Providing CBSE-affiliated education that fosters confident, independent thinkers.
 Our focus is on developing well-rounded individuals, not just academic achievers.
@@ -66,7 +66,7 @@ Empowering students to excel in life, both inside and outside the classroom.
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            className="flex flex-col sm:flex-row gap-4"
+            className="hidden md:flex flex-col sm:flex-row gap-4"
           >
             <a
               href="#enquiry"

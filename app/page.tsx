@@ -20,7 +20,7 @@ import { Footer } from "@/components/boty/footer"
 
 export default function HomePage() {
   return (
-    <main>
+    <main className="pb-16 md:pb-0">
       {/* <AdmissionPopup /> */}
       <Header />
       <Hero />

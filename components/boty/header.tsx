@@ -43,7 +43,7 @@ export function Header() {
               className="inline-flex items-center gap-2 rounded-full bg-green-600 px-5 py-2 xl:px-6 xl:py-2.5 text-white font-semibold hover:brightness-110 boty-transition shadow-lg"
             >
               <img src="/Whatsapp white.svg" alt="WhatsApp" className="w-5 h-5" />
-              WhatsApp Us
+              07700051010
             </a>
             <a
               href="#enquiry"
@@ -75,7 +75,7 @@ export function Header() {
           <a href="#branches" className="block py-3 text-foreground hover:text-primary boty-transition" onClick={() => setOpen(false)}>Location</a>
           <a href="tel:7700051010" className="flex items-center justify-center gap-2 py-3 mt-2 rounded-full bg-white border border-secondary text-secondary font-semibold" onClick={() => setOpen(false)}>
             <img src="/Call green.svg" alt="Call" className="w-5 h-5" />
-            Call Us
+            07700051010
           </a>
           <a
             href="https://wa.me/917700051010?text=Hi%2C%20I%27m%20interested%20in%20admissions"
