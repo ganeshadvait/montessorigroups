@@ -16,7 +16,6 @@ const grades = [
   "Class 4 – 5",
   "Class 6 – 8",
   "Class 9 – 10",
-  // "Class 11 – 12",
 ]
 
 export function BookAppointment() {
@@ -72,6 +71,24 @@ export function BookAppointment() {
     setError("")
 
     try {
+      // ✅ Send to Google Sheets
+      await fetch(
+        "https://script.google.com/macros/s/AKfycbxLD1usPLYF81iTOauF_cMd87G3kbyzv60sdxPc4BUlxnEJTYljYjv2wYJiLGYeBGA4ww/exec",
+        {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            studentName: formData.student_name,
+            parentName:  formData.parent_name,
+            phoneNumber: formData.phone,
+            email:       formData.email,
+            classGrade:  formData.class_grade,
+          }),
+        }
+      )
+
+      // ✅ Send to WordPress API
       const res = await fetch("https://ekatvam.ai/wp-json/ekatvam/v1/enquiry", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -152,7 +169,7 @@ export function BookAppointment() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-green-600 text-white px-5 py-3 rounded-full text-sm font-medium boty-transition hover:bg-green-700"
-              >
+             >
                 <img src="/Whatsapp white.svg" alt="WhatsApp" className="w-6 h-6" />
                 WhatsApp Us
               </a>
@@ -189,109 +206,97 @@ export function BookAppointment() {
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">Student Name *</label>
-                    <input
-                      type="text"
-                      placeholder="Child's full name"
-                      value={formData.student_name}
-                      onChange={(e) => { setFormData({ ...formData, student_name: e.target.value }); setFieldErrors({ ...fieldErrors, student_name: "" }) }}
-                      className={`w-full px-4 py-3 rounded-xl border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition ${fieldErrors.student_name ? "border-red-500" : "border-border"}`}
-                    />
-                    {fieldErrors.student_name && <p className="text-xs text-red-500 mt-1">{fieldErrors.student_name}</p>}
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">Parent Name *</label>
-                    <input
-                      type="text"
-                      placeholder="Father / Mother name"
-                      value={formData.parent_name}
-                      onChange={(e) => { setFormData({ ...formData, parent_name: e.target.value }); setFieldErrors({ ...fieldErrors, parent_name: "" }) }}
-                      className={`w-full px-4 py-3 rounded-xl border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition ${fieldErrors.parent_name ? "border-red-500" : "border-border"}`}
-                    />
-                    {fieldErrors.parent_name && <p className="text-xs text-red-500 mt-1">{fieldErrors.parent_name}</p>}
-                  </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-medium text-foreground mb-2">Student Name *</label>
+                  <input
+                    type="text"
+                    placeholder="Child's full name"
+                    value={formData.student_name}
+                    onChange={(e) => { setFormData({ ...formData, student_name: e.target.value }); setFieldErrors({ ...fieldErrors, student_name: "" }) }}
+                    className={`w-full px-4 py-3 rounded-xl border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition ${fieldErrors.student_name ? "border-red-500" : "border-border"}`}
+                  />
+                  {fieldErrors.student_name && <p className="text-xs text-red-500 mt-1">{fieldErrors.student_name}</p>}
                 </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">Phone Number *</label>
-                    <input
-                      type="tel"
-                      placeholder="+91 9999 99999"
-                      value={formData.phone}
-                      onChange={(e) => { setFormData({ ...formData, phone: e.target.value }); setFieldErrors({ ...fieldErrors, phone: "" }) }}
-                      className={`w-full px-4 py-3 rounded-xl border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition ${fieldErrors.phone ? "border-red-500" : "border-border"}`}
-                    />
-                    {fieldErrors.phone && <p className="text-xs text-red-500 mt-1">{fieldErrors.phone}</p>}
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">Email</label>
-                    <input
-                      type="email"
-                      placeholder="parent@email.com"
-                      value={formData.email}
-                      onChange={(e) => { setFormData({ ...formData, email: e.target.value }); setFieldErrors({ ...fieldErrors, email: "" }) }}
-                      className={`w-full px-4 py-3 rounded-xl border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition ${fieldErrors.email ? "border-red-500" : "border-border"}`}
-                    />
-                    {fieldErrors.email && <p className="text-xs text-red-500 mt-1">{fieldErrors.email}</p>}
-                  </div>
+                <div>
+                  <label className="block text-sm font-medium text-foreground mb-2">Parent Name *</label>
+                  <input
+                    type="text"
+                    placeholder="Father / Mother name"
+                    value={formData.parent_name}
+                    onChange={(e) => { setFormData({ ...formData, parent_name: e.target.value }); setFieldErrors({ ...fieldErrors, parent_name: "" }) }}
+                    className={`w-full px-4 py-3 rounded-xl border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition ${fieldErrors.parent_name ? "border-red-500" : "border-border"}`}
+                  />
+                  {fieldErrors.parent_name && <p className="text-xs text-red-500 mt-1">{fieldErrors.parent_name}</p>}
                 </div>
+              </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {/* <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">Select Branch *</label>
-                    <select
-                      required
-                      className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition cursor-pointer appearance-none"
-                    >
-                      <option value="">Choose nearest branch</option>
-                      {branches.map((b) => (
-                        <option key={b} value={b}>{b}</option>
-                      ))}
-                    </select>
-                  </div> */}
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">Class / Grade *</label>
-                    <select
-                      value={formData.class_grade}
-                      onChange={(e) => { setFormData({ ...formData, class_grade: e.target.value }); setFieldErrors({ ...fieldErrors, class_grade: "" }) }}
-                      className={`w-full px-4 py-3 rounded-xl border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition cursor-pointer appearance-none ${fieldErrors.class_grade ? "border-red-500" : "border-border"}`}
-                    >
-                      <option value="">Select class</option>
-                      {grades.map((g) => (
-                        <option key={g} value={g}>{g}</option>
-                      ))}
-                    </select>
-                    {fieldErrors.class_grade && <p className="text-xs text-red-500 mt-1">{fieldErrors.class_grade}</p>}
-                  </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-medium text-foreground mb-2">Phone Number *</label>
+                  <input
+                    type="tel"
+                    placeholder="+91 9999 99999"
+                    value={formData.phone}
+                    onChange={(e) => { setFormData({ ...formData, phone: e.target.value }); setFieldErrors({ ...fieldErrors, phone: "" }) }}
+                    className={`w-full px-4 py-3 rounded-xl border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition ${fieldErrors.phone ? "border-red-500" : "border-border"}`}
+                  />
+                  {fieldErrors.phone && <p className="text-xs text-red-500 mt-1">{fieldErrors.phone}</p>}
                 </div>
+                <div>
+                  <label className="block text-sm font-medium text-foreground mb-2">Email</label>
+                  <input
+                    type="email"
+                    placeholder="parent@email.com"
+                    value={formData.email}
+                    onChange={(e) => { setFormData({ ...formData, email: e.target.value }); setFieldErrors({ ...fieldErrors, email: "" }) }}
+                    className={`w-full px-4 py-3 rounded-xl border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition ${fieldErrors.email ? "border-red-500" : "border-border"}`}
+                  />
+                  {fieldErrors.email && <p className="text-xs text-red-500 mt-1">{fieldErrors.email}</p>}
+                </div>
+              </div>
 
-                {error && (
-                  <p className="text-sm text-red-600 text-center bg-red-50 rounded-lg py-2">{error}</p>
-                )}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-medium text-foreground mb-2">Class / Grade *</label>
+                  <select
+                    value={formData.class_grade}
+                    onChange={(e) => { setFormData({ ...formData, class_grade: e.target.value }); setFieldErrors({ ...fieldErrors, class_grade: "" }) }}
+                    className={`w-full px-4 py-3 rounded-xl border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition cursor-pointer appearance-none ${fieldErrors.class_grade ? "border-red-500" : "border-border"}`}
+                  >
+                    <option value="">Select class</option>
+                    {grades.map((g) => (
+                      <option key={g} value={g}>{g}</option>
+                    ))}
+                  </select>
+                  {fieldErrors.class_grade && <p className="text-xs text-red-500 mt-1">{fieldErrors.class_grade}</p>}
+                </div>
+              </div>
 
-                <button
-                  type="submit"
-                  disabled={submitting}
-                  className="w-full flex items-center justify-center gap-3 bg-secondary text-secondary-foreground py-4 rounded-full font-semibold tracking-wide boty-transition hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 mt-2 text-lg shadow-lg disabled:opacity-60 disabled:cursor-not-allowed"
-                >
-                  {submitting ? "Submitting..." : "Enquire Now"}
-                  {!submitting && <ArrowRight className="w-5 h-5" />}
-                </button>
+              {error && (
+                <p className="text-sm text-red-600 text-center bg-red-50 rounded-lg py-2">{error}</p>
+              )}
 
-                {submitted ? (
-                  <p className="flex items-center justify-center gap-2 text-sm text-green-600 text-center mt-3">
-                    <CheckCircle className="w-4 h-4" />
-                    Thank you! We will contact you shortly.
-                  </p>
-                ) : (
-                  <p className="text-xs text-center text-muted-foreground mt-3">
-                    No spam. Your data is safe with us.
-                  </p>
-                )}
-              </form>
+              <button
+                type="submit"
+                disabled={submitting}
+                className="w-full flex items-center justify-center gap-3 bg-secondary text-secondary-foreground py-4 rounded-full font-semibold tracking-wide boty-transition hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 mt-2 text-lg shadow-lg disabled:opacity-60 disabled:cursor-not-allowed"
+              >
+                {submitting ? "Submitting..." : "Enquire Now"}
+                {!submitting && <ArrowRight className="w-5 h-5" />}
+              </button>
+
+              {submitted ? (
+                <p className="flex items-center justify-center gap-2 text-sm text-green-600 text-center mt-3">
+                  <CheckCircle className="w-4 h-4" />
+                  Thank you! We will contact you shortly.
+                </p>
+              ) : (
+                <p className="text-xs text-center text-muted-foreground mt-3">
+                  No spam. Your data is safe with us.
+                </p>
+              )}
+            </form>
           </div>
         </div>
       </div>
