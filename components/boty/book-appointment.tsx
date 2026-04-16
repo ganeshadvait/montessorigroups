@@ -148,12 +148,28 @@ export function BookAppointment() {
 
             {/* Quick Contact */}
             <div className="flex flex-wrap gap-3 mt-6">
-              
-                href="https://wa.me/917700051010?text=Hi%2C%20I%27m%20interested%20in%20admissions"
+              {/* <a
+                href="tel:7700053030"
+                className="md:hidden inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-3 rounded-full text-sm font-medium boty-transition hover:bg-primary/90"
+              >
+                <Phone className="w-4 h-4" />
+                Call Admissions
+              </a> */}
+              {/* <a
+                href="https://wa.me/917700053030?text=Hi%2C%20I%27m%20interested%20in%20admissions"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden md:inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-3 rounded-full text-sm font-medium boty-transition hover:bg-primary/90"
+              >
+                <Phone className="w-4 h-4" />
+                WhatsApp Admissions
+              </a> */}
+              <a
+                href="https://wa.me/917700053030?text=Hi%2C%20I%27m%20interested%20in%20admissions"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-green-600 text-white px-5 py-3 rounded-full text-sm font-medium boty-transition hover:bg-green-700"
-             <a >
+             >
                 <img src="/Whatsapp white.svg" alt="WhatsApp" className="w-6 h-6" />
                 WhatsApp Us
               </a>
