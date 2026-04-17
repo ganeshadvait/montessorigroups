@@ -120,6 +120,16 @@ export function BookAppointment() {
       if (!res.ok) throw new Error("Something went wrong. Please try again.")
 
       setSubmitted(true)
+      setFormData({
+        student_name: "",
+        parent_name: "",
+        phone: "",
+        alt_phone: "",
+        email: "",
+        previous_school: "",
+        class_grade: "",
+      })
+      setFieldErrors({})
     } catch (err) {
       setError(err instanceof Error ? err.message : "Something went wrong. Please try again.")
     } finally {
