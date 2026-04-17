@@ -6,7 +6,7 @@ import Image from "next/image"
 const wings = [
   {
     title: "Pre- Primary Wing",
-    grade: "(Classes Jr. KG to Sr. KG)",
+    grade: "(Grade KG-I, KG-II, KG-III)",
     color: "#5BB5B0",
     bgColor: "#D4ECEA",
     image: "/pre primary wing.svg",

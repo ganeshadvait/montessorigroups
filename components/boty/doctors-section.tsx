@@ -11,7 +11,7 @@ const branch = {
     "Bavupet, X Road, Yellapur, Telangana 506371",
   phone: "7700051010",
   email: "info@montessorijnprime.com",
-  hours: "Mon – Sat : 8:30 AM – 4:30 PM",
+  hours: "Mon – Sun : 8:30 AM – 5:30 PM",
   // Random Yellandu coordinates for embed
   mapEmbed:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3792.5927787991886!2d79.4911602!3d18.090397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a334920b900d44b%3A0x7772fea1f8980e51!2sMontessori%20Prime%20School!5e0!3m2!1sen!2sin!4v1775727153886!5m2!1sen!2sin",
