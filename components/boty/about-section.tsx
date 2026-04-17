@@ -118,7 +118,7 @@ export function AboutSection() {
               offering Residential, Weekly Boarding, and Day Scholastic
               programs. The school provides a well-balanced daily schedule with
               a thoughtful blend of academics, sports, and co-curricular
-              activities to ensure a comprehensive, all-round education.
+              activities, delivering an education that meets global standards.
             </p>
 
             <p

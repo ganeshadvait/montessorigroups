@@ -65,6 +65,26 @@ export function Testimonials() {
           <p className="text-black/75 max-w-xl mx-auto mb-8 md:mb-12 mt-4 md:text-xl lg:text-3xl">
             Our Students Play What They Love
           </p>
+
+          {/* Description Box */}
+          <div
+            className={`max-w-3xl mx-auto mt-8 mb-12 p-6 md:p-8 rounded-2xl bg-primary/5 border border-primary/20 boty-shadow ${
+              headerVisible ? "animate-blur-in opacity-0" : "opacity-0"
+            }`}
+            style={
+              headerVisible
+                ? { animationDelay: "0.6s", animationFillMode: "forwards" }
+                : {}
+            }
+          >
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed text-center">
+              At Montessori, sports are more than just a game - they are a
+              pathway to discipline, teamwork, and lifelong confidence. From
+              football fields to swimming pools, chess boards to running tracks,
+              every child discovers a passion that shapes their character
+              alongside academic excellence.
+            </p>
+          </div>
         </div>
 
         {/* Scrolling Images */}

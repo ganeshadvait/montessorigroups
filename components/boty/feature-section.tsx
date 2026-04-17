@@ -9,96 +9,119 @@ const features = [
     image: "/CBSE Curriculum.png",
     description: "Nationally recognized curriculum ensuring academic rigor and comprehensive learning outcomes.",
     color: "bg-primary/10 text-primary",
+    hoverBorder: "#FCBA28",
   },
   {
     title: "Smart Classrooms",
     image: "/Smart Classrooms.png",
     description: "State-of-the-art digital learning tools and modern facilities across all 15 campuses.",
     color: "bg-primary/10 text-primary",
+    hoverBorder: "#20A1A6",
   },
   {
     title: "Holistic Development",
     image: "/Holistic Development.png",
     description: "Equal focus on academics, sports, arts, and character building for well-rounded growth.",
     color: "bg-secondary/20 text-secondary-foreground",
+    hoverBorder: "#DD3E74",
   },
   {
     title: "Safe & Nurturing",
     image: "/Safe & Nurturing.png",
     description: "CCTV-monitored campuses with trained staff ensuring every child feels secure and valued.",
     color: "bg-primary/10 text-primary",
+    hoverBorder: "#10B981",
   },
   {
     title: "Proven Results",
     image: "/Proven Results.png",
     description: "Consistent board exam excellence and competitive exam success across all branches.",
     color: "bg-secondary/20 text-secondary-foreground",
+    hoverBorder: "#FCBA28",
   },
   {
     title: "Science Laboratories",
     image: "/Science Laboratories.png",
     description: "Well-equipped Physics, Chemistry & Biology labs for hands-on practical learning.",
     color: "bg-secondary/20 text-secondary-foreground",
+    hoverBorder: "#20A1A6",
   },
   {
     title: "Computer Lab",
     image: "/Computer Lab.png",
-    description: "Modern computer labs with high-speed internet for coding, research, and digital literacy.",
+    description: "Modern computer labs with high-speed internet for coding, AI learning, research, and digital literacy.",
     color: "bg-primary/10 text-primary",
+    hoverBorder: "#DD3E74",
   },
   {
     title: "Library & Reading Room",
     image: "/Library & Reading Room.png",
     description: "Extensive collection of books, journals, and digital resources to foster a reading culture.",
     color: "bg-secondary/20 text-secondary-foreground",
+    hoverBorder: "#10B981",
   },
   {
     title: "Sports Facilities",
     image: "/Sports Facilities.png",
     description: "Cricket, volleyball, basketball courts, and indoor games - promoting fitness and team spirit.",
     color: "bg-primary/10 text-primary",
+    hoverBorder: "#FCBA28",
   },
   {
     title: "Swimming Pool",
     image: "/Swimming Pool.png",
     description: "Safe, supervised swimming pool for physical fitness and recreational activities.",
     color: "bg-secondary/20 text-secondary-foreground",
+    hoverBorder: "#20A1A6",
   },
   {
     title: "Music & Dance Room",
     image: "/Music & Dance Room.png",
     description: "Dedicated spaces for vocal, instrumental music, and classical/western dance training.",
     color: "bg-primary/10 text-primary",
+    hoverBorder: "#DD3E74",
   },
   {
     title: "Transport Facility",
     image: "/Transport Facility.png",
     description: "GPS-tracked school buses covering all major routes ensuring safe and timely commute.",
     color: "bg-secondary/20 text-secondary-foreground",
+    hoverBorder: "#10B981",
   },
   {
-    title: "Medical Room",
+    title: "Medical Facility",
     image: "/Medical Room.png",
-    description: "On-campus first aid and regular health check-ups with a trained nurse on duty.",
+    description: "24/7 on-campus medical care with specialized doctors and nurses, plus regular health check-ups and first aid services.",
     color: "bg-primary/10 text-primary",
+    hoverBorder: "#FCBA28",
   },
   {
     title: "CCTV Surveillance",
     image: "/CCTV Surveillance.png",
     description: "Complete campus coverage with CCTV cameras monitored in real-time for child safety.",
     color: "bg-secondary/20 text-secondary-foreground",
+    hoverBorder: "#20A1A6",
   },
   {
     title: "Green Campus",
     image: "/Green Campus.png",
     description: "Eco-friendly, spacious campus with gardens, play areas, and open-air learning spaces.",
     color: "bg-primary/10 text-primary",
+    hoverBorder: "#DD3E74",
   },
   {
     title: "Activity Halls",
     image: "/Activity Halls.png",
     description: "Multi-purpose halls for assemblies, cultural events, seminars, and parent-teacher meetings.",
     color: "bg-secondary/20 text-secondary-foreground",
+    hoverBorder: "#10B981",
+  },
+  {
+    title: "Amphitheatre",
+    image: "/Amphitheatre.svg",
+    description: "Open-air space for cultural events, performances, and gatherings that nurture creativity.",
+    color: "bg-primary/10 text-primary",
+    hoverBorder: "#FCBA28",
   },
 ]
 
@@ -168,10 +191,16 @@ export function FeatureSection() {
               {features.map((feature, index) => (
                 <div
                   key={feature.title}
-                  className={`group p-8 rounded-2xl bg-background boty-shadow boty-transition w-[280px] flex-shrink-0 transition-all duration-700 ease-out ${
+                  className={`group p-8 rounded-2xl bg-background boty-shadow w-[280px] flex-shrink-0 border-2 border-transparent transition-[opacity,transform] duration-700 ease-out ${
                     isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                   }`}
                   style={{ transitionDelay: `${index * 100}ms` }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.borderColor = feature.hoverBorder
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.borderColor = "transparent"
+                  }}
                 >
                   <div className={`inline-flex items-center justify-center w-14 h-14 rounded-2xl ${feature.color} mb-5 boty-transition`}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -189,10 +218,16 @@ export function FeatureSection() {
             {visibleFeatures.map((feature, index) => (
               <div
                 key={feature.title}
-                className={`group p-8 rounded-2xl bg-background boty-shadow boty-transition hover:scale-[1.02] transition-all duration-700 ease-out ${
+                className={`group p-8 rounded-2xl bg-background boty-shadow hover:scale-[1.02] border-2 border-transparent transition-[opacity,transform] duration-700 ease-out ${
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
                 style={{ transitionDelay: `${(index % INITIAL_COUNT) * 100}ms` }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.borderColor = feature.hoverBorder
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.borderColor = "transparent"
+                }}
               >
                 <div className={`inline-flex items-center justify-center w-14 h-14 rounded-2xl ${feature.color} mb-5 boty-transition`}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}

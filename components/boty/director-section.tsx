@@ -102,7 +102,7 @@ export function DirectorSection() {
               At Montessori Group of Schools, we take pride in living by the
               words of Willa A. Foster: “Quality is never an accident; it is
               always the result of high intention, sincere effort, intelligent
-              direction and skillful execution.” Over the years, Montessori has
+              direction and skillful execution.” For over 3 decades, Montessori has
               consistently strived for excellence, establishing itself as a
               trusted name in education.
             </p>
@@ -116,9 +116,9 @@ export function DirectorSection() {
                   : {}
               }
             >
-              Twenty-eight years ago, I founded Montessori Group of Institutions
-              with a vision to shape the intellectual wealth of our future
-              generations. While India has seen material and economic progress,
+              Since 1993, for over three decades, I have led Montessori Group of
+              Institutions with a vision to shape the intellectual wealth of our
+              future generations. While India has seen material and economic progress,
               true wealth lies in the intellectual power of young minds. Our
               mission at Montessori is to equip students with the skills,
               knowledge, and values to compete globally, emphasizing not only
