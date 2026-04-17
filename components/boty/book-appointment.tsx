@@ -107,6 +107,25 @@ export function BookAppointment() {
     setError("")
 
     try {
+      await fetch(
+        "https://script.google.com/macros/s/AKfycbzIIiLlscv3SpTFOwoOeYm5YvKXEwo6yAzHnuVEBautBafiWqiKyl6Fl75fS4nVu6khyw/exec",
+        {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            studentName: formData.student_name,
+            parentName: formData.parent_name,
+            phoneNumber: formData.phone,
+            altPhone: formData.alt_phone,
+            email: formData.email,
+            previousSchool: formData.previous_school,
+            classGrade: formData.class_grade,
+            pageUrl: window.location.href,
+          }),
+        }
+      )
+
       const res = await fetch("https://ekatvam.ai/wp-json/ekatvam/v1/enquiry", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
