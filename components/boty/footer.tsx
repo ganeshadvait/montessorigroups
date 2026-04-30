@@ -108,11 +108,11 @@ export function Footer() {
               <li>
                 <a href="tel:7700053030" className="md:hidden flex items-center gap-2 text-sm text-white/60 hover:text-white boty-transition">
                   <img src="/Call white.svg" alt="Call" className="w-6 h-6 flex-shrink-0" />
-                  +91 77000 51010
+                  +91 77000 53030
                 </a>
                 <a href="https://wa.me/917700053030?text=Hi%2C%20I%27m%20interested%20in%20admissions" target="_blank" rel="noopener noreferrer" className="hidden md:flex items-center gap-2 text-sm text-white/60 hover:text-white boty-transition">
                   <img src="/Whatsapp white.svg" alt="WhatsApp" className="w-4 h-4 flex-shrink-0" />
-                  +91 77000 51010
+                  +91 77000 53030
                 </a>
               </li>
               <li>
