@@ -1,4 +1,5 @@
 import { AdmissionPopup } from "@/components/boty/admission-popup"
+import { RankingBannerPopup } from "@/components/boty/ranking-banner-popup"
 import { Header } from "@/components/boty/header"
 import { Hero } from "@/components/boty/hero"
 import { TrustBadges } from "@/components/boty/trust-badges"
@@ -22,6 +23,7 @@ export default function HomePage() {
   return (
     <main className="pb-16 md:pb-0">
       {/* <AdmissionPopup /> */}
+      <RankingBannerPopup />
       <Header />
       <Hero />
       <TrustBadges />
