@@ -36,7 +36,7 @@ export function RankingBannerPopup() {
       aria-label="Ranking announcement"
     >
       <div
-        className="relative w-full max-w-2xl"
+        className="relative inline-block"
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -46,16 +46,14 @@ export function RankingBannerPopup() {
         >
           <X className="h-5 w-5" />
         </button>
-        <div className="overflow-hidden rounded-2xl bg-white shadow-2xl">
-          <Image
-            src="/ranking%20banner.jpeg"
-            alt="Ranking Banner"
-            width={1200}
-            height={1200}
-            priority
-            className="h-auto w-full object-contain"
-          />
-        </div>
+        <Image
+          src="/ranking%20banner.jpeg"
+          alt="Ranking Banner"
+          width={1200}
+          height={1200}
+          priority
+          className="block max-h-[90vh] w-auto rounded-2xl shadow-2xl"
+        />
       </div>
     </div>
   )
