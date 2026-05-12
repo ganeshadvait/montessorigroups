@@ -4,7 +4,7 @@ import { useState } from "react"
 import { Phone, MapPin } from "lucide-react"
 
 const WHATSAPP_URL = "https://wa.me/917700053030?text=Hi%2C%20I%27m%20interested%20in%20admissions"
-const CALL_URL = "tel:+917700053030"
+const CALL_URL = "tel:08065064810"
 const DIRECTIONS_URL = "https://maps.app.goo.gl/LKDPGMnGmtyx8Tsn7"
 const INSTAGRAM_URL = "https://www.instagram.com/montessorijnprime/"
 

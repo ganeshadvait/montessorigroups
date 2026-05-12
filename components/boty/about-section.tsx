@@ -114,7 +114,7 @@ export function AboutSection() {
                   : {}
               }
             >
-              Montessori Prime School is a K–X co-educational institution
+              Montessori Prime School is a KG–X co-educational institution
               offering Residential, Weekly Boarding, and Day Scholastic
               programs. The school provides a well-balanced daily schedule with
               a thoughtful blend of academics, sports, and co-curricular
