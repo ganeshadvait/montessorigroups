@@ -9,7 +9,7 @@ const branch = {
   name: "Yellapur",
   address:
     "Bavupet, X Road, Yellapur, Telangana 506371",
-  phone: "08065064810",
+  phone: "917700053030",
   email: "info@montessorijnprime.com",
   hours: "Mon – Sun : 8:30 AM – 5:30 PM",
   // Random Yellandu coordinates for embed
