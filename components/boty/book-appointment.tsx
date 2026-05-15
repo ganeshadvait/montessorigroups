@@ -157,7 +157,7 @@ export function BookAppointment() {
   }
 
   return (
-    <section id="enquiry" className="relative z-30 py-12 md:py-24 bg-card scroll-mt-20">
+    <section className="relative z-30 py-12 md:py-24 bg-card scroll-mt-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div
           ref={sectionRef}
@@ -225,7 +225,8 @@ export function BookAppointment() {
 
           {/* Right - Form */}
           <div
-            className={`transition-all duration-700 ease-out ${
+            id="enquiry"
+            className={`scroll-mt-10 transition-all duration-700 ease-out ${
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
             }`}
             style={{ transitionDelay: "100ms" }}
