@@ -77,7 +77,7 @@ Empowering students to excel in life, both inside and outside the classroom.
               Book A Campus Tour
             </a>
             <a
-              href="tel:7700053030"
+              href="tel:08065064810"
               className="md:hidden inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/30 px-8 py-4 text-white font-semibold text-lg hover:bg-white/10 boty-transition"
             >
               <img src="/Call white.svg" alt="Call" className="w-6 h-6" />

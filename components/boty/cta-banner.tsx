@@ -63,7 +63,7 @@ export function CTABanner() {
                 <ArrowRight className="w-5 h-5" />
               </a>
               <a
-                href="tel:7700053030"
+                href="tel:08065064810"
                 className="md:hidden inline-flex items-center justify-center gap-2 border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 boty-transition"
               >
                 <img src="/Call white.svg" alt="Call" className="w-6 h-6" />
