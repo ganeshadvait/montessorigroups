@@ -37,7 +37,7 @@ export function Header() {
           <a href="#location" className={`boty-transition ${scrolled ? "text-foreground/70 hover:text-secondary" : "text-black/80 hover:text-secondary"}`}>Location</a>
           <div className="flex items-center gap-3">
             <a
-              href="https://wa.me/9108065064810?text=Hi%2C%20I%27m%20interested%20in%20admissions"
+              href="https://wa.me/917700053030?text=Hi%2C%20I%27m%20interested%20in%20admissions"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-green-600 px-2 py-2 text-white font-semibold hover:brightness-110 boty-transition shadow-lg"
