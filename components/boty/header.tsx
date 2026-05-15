@@ -40,10 +40,10 @@ export function Header() {
               href="https://wa.me/917700053030?text=Hi%2C%20I%27m%20interested%20in%20admissions"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-green-600 px-5 py-2 xl:px-6 xl:py-2.5 text-white font-semibold hover:brightness-110 boty-transition shadow-lg"
+              className="inline-flex items-center gap-2 rounded-full bg-green-600 px-2 py-2 text-white font-semibold hover:brightness-110 boty-transition shadow-lg"
             >
               <img src="/Whatsapp white.svg" alt="WhatsApp" className="w-5 h-5" />
-              07700053030
+              
             </a>
             <a
               href="#enquiry"
@@ -55,7 +55,7 @@ export function Header() {
         </div>
 
         <div className="flex lg:hidden items-center gap-2">
-          <a href="tel:08065064810" aria-label="Call us" className="p-2 animate-[ring_1.5s_ease-in-out_infinite]">
+          <a href="tel:07700053030" aria-label="Call us" className="p-2 animate-[ring_1.5s_ease-in-out_infinite]">
             <img src="/Call green.svg" alt="Call" className="w-5 h-5" />
           </a>
           <button
@@ -78,9 +78,9 @@ export function Header() {
           <a href="#about" className="block py-3 text-foreground hover:text-primary boty-transition" onClick={() => setOpen(false)}>About</a>
           <a href="#testimonials" className="block py-3 text-foreground hover:text-primary boty-transition" onClick={() => setOpen(false)}>Testimonials</a>
           <a href="#branches" className="block py-3 text-foreground hover:text-primary boty-transition" onClick={() => setOpen(false)}>Location</a>
-          <a href="tel:08065064810" className="flex items-center justify-center gap-2 py-3 mt-2 rounded-full bg-white border border-secondary text-secondary font-semibold" onClick={() => setOpen(false)}>
+          <a href="tel:7700053030" className="flex items-center justify-center gap-2 py-3 mt-2 rounded-full bg-white border border-secondary text-secondary font-semibold" onClick={() => setOpen(false)}>
             <img src="/Call green.svg" alt="Call" className="w-5 h-5" />
-            08065064810
+            7700053030
           </a>
           <a
             href="https://wa.me/917700053030?text=Hi%2C%20I%27m%20interested%20in%20admissions"
