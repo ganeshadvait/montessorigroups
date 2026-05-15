@@ -55,7 +55,7 @@ export function Header() {
         </div>
 
         <div className="flex lg:hidden items-center gap-2">
-          <a href="tel:07700053030" aria-label="Call us" className="p-2 animate-[ring_1.5s_ease-in-out_infinite]">
+          <a href="tel:7700053030" aria-label="Call us" className="p-2 animate-[ring_1.5s_ease-in-out_infinite]">
             <img src="/Call green.svg" alt="Call" className="w-5 h-5" />
           </a>
           <button
