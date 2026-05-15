@@ -175,7 +175,7 @@ export function DoctorsSection() {
                 Call Now
               </a>
               <a
-                href={`https://wa.me/91${branch.phone}?text=Hi%2C%20I%27m%20interested%20in%20admissions`}
+                href={`https://wa.me/917700053030?text=Hi%2C%20I%27m%20interested%20in%20admissions`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hidden md:inline-flex items-center justify-center gap-2 bg-green-600 text-secondary-foreground px-6 py-4 rounded-full text-sm font-medium tracking-wide boty-transition hover:brightness-110 flex-1"
