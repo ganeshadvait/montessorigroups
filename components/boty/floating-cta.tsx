@@ -100,13 +100,13 @@ export default function FloatingCTA() {
           bgClass="bg-[#20A1A6] hover:bg-[#1a8a8e] text-white"
           icon={<MapPin className="w-5 h-5 shrink-0" />}
         />
-        <FloatingButton
+        {/* <FloatingButton
           href={INSTAGRAM_URL}
           target="_blank"
           label="Instagram"
           bgClass="bg-gradient-to-tr from-[#feda75] via-[#d62976] to-[#4f5bd5] hover:opacity-90 text-white"
           icon={<InstagramIcon className="w-5 h-5 shrink-0" />}
-        />
+        /> */}
       </div>
 
       {/* Mobile: Fixed bottom bar */}
