@@ -84,7 +84,7 @@ Empowering students to excel in life, both inside and outside the classroom.
               Call Now
             </a>
             <a
-              href="https://wa.me/08065064810?text=Hi%2C%20I%27m%20interested%20in%20admissions"
+              href="https://wa.me/+9108065064810?text=Hi%2C%20I%27m%20interested%20in%20admissions"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden md:inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/30 px-8 py-4 text-white font-semibold text-lg hover:bg-white/10 boty-transition"
