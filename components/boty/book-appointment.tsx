@@ -157,7 +157,7 @@ export function BookAppointment() {
   }
 
   return (
-    <section id="enquiry" className="relative z-30 py-12 md:py-24 bg-card scroll-mt-20">
+    <section className="relative z-30 py-12 md:py-24 bg-card scroll-mt-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div
           ref={sectionRef}
@@ -212,7 +212,7 @@ export function BookAppointment() {
                 WhatsApp Admissions
               </a> */}
               <a
-                href="https://wa.me/917700053030?text=Hi%2C%20I%27m%20interested%20in%20admissions"
+                href="https://wa.me/08065064810?text=Hi%2C%20I%27m%20interested%20in%20admissions"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-green-600 text-white px-5 py-3 rounded-full text-sm font-medium boty-transition hover:bg-green-700"
@@ -225,7 +225,8 @@ export function BookAppointment() {
 
           {/* Right - Form */}
           <div
-            className={`transition-all duration-700 ease-out ${
+            id="enquiry"
+            className={`scroll-mt-10 transition-all duration-700 ease-out ${
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
             }`}
             style={{ transitionDelay: "100ms" }}
