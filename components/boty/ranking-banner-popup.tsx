@@ -47,10 +47,10 @@ export function RankingBannerPopup() {
           <X className="h-5 w-5" />
         </button>
         <Image
-          src="/ranking%20banner.jpeg"
+          src="/montessori banner img.jpeg"
           alt="Ranking Banner"
-          width={1200}
-          height={1200}
+          width={900}
+          height={900}
           priority
           className="block max-h-[90vh] w-auto rounded-2xl shadow-2xl"
         />
