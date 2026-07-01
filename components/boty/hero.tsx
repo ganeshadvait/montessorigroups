@@ -84,13 +84,11 @@ Empowering students to excel in life, both inside and outside the classroom.
               Call Now
             </a>
             <a
-              href="https://wa.me/+9108065064810?text=Hi%2C%20I%27m%20interested%20in%20admissions"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="tel:08065064810"
               className="hidden md:inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/30 px-8 py-4 text-white font-semibold text-lg hover:bg-white/10 boty-transition"
             >
-              <img src="/Whatsapp white.svg" alt="WhatsApp" className="w-6 h-6" />
-              WhatsApp Us
+              <img src="/Call white.svg" alt="Call" className="w-6 h-6" />
+              08065064810
             </a>
           </motion.div>
 
